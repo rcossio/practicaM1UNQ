@@ -1,0 +1,115 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=1.5cm]{geometry}
+
+%\documentclass[11pt]{article}
+%\usepackage[paperwidth=9cm,paperheight=60cm,margin=0.4cm]{geometry}
+
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+%Links
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+%Simbolos matemáticos
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%Enumeracion
+\usepackage{enumitem}
+
+%Páginas sin numeración
+\pagestyle{empty}
+
+%Interlineado
+\renewcommand{\baselinestretch}{1.5}
+
+%Arreglar comillas
+\usepackage [autostyle]{csquotes}
+\MakeOuterQuote{"}
+
+%Macros
+\newcommand{\Item}{\item[\stepcounter{enumii}$\blacktriangleright$\textbf{(\alph{enumii})}]} %Negrita en algunos items
+\newcommand{\answer}{\item[**]}
+\newcommand{\exercise}{\item}
+
+%Logic macros
+\newcommand{\then}{\to}
+\newcommand{\eq}{\leftrightarrow}
+\newcommand{\xor}{\veebar}
+\newcommand{\nor}{\downarrow}
+\newcommand{\nimply}{\nrightarrow}
+\newcommand{\nand}{\uparrow}
+\newcommand{\Then}{\Rightarrow}
+\newcommand{\Eq}{\Leftrightarrow}
+
+
+\begin{document}
+
+\noindent \hrulefill 
+\vspace{-7pt}
+\begin{center} 
+	\textbf{ Práctica 1: Lógica proposicional y de primer orden } \\
+	Comisión: Rodrigo Cossio-Pérez y Leonardo Lattenero
+\end{center}
+\vspace{-10pt}
+\hrulefill
+
+
+\begin{enumerate}
+
+	\exercise Demostrar que las siguientes relaciones son de equivalencia, indicar sus clases de equivalencia y el conjunto cociente.
+	%\begin{multicols}{2}
+	\begin{enumerate} [label=(\alph*)]
+		\item La relación $ \sim = \left\lbrace (x,y) \in \mathbb{Z}^{2} ~|~ \exists k \in \mathbb{Z} ~~(x-y=2k) \right\rbrace$ donde $x \sim y$ se lee como "$x$ tiene la misma paridad que $y$".
+		
+		\item La relación $ \sim = \left\lbrace (x,y)\in \mathbb{Z}^{2} ~|~ x^{2}=y^{2} \right\rbrace$ donde $x \sim y$ se lee como "$x$ tiene el mismo cuadrado que $y$".
+		
+		\item Considerando un rectángulo $L_{1}$ de lados $a$ y $b$ con área $a.b$ y otro rectángulo $L_2$ de lados $c$ y $d$ con área $c.d$, donde $a,b,c,d \in ( 0 , +\infty)$. Se define la relación $ \sim = \left\lbrace (L_1,L_2) ~|~ a.b=c.d ~\right\rbrace$ donde $L_{1}\sim L_{2}$ se lee como "$L_{1}$ tiene la misma área que $L_{2}$".
+		
+		\item Considerando la fracción $q_1$ representada por $\displaystyle\frac{a}{b}$ y otra fracción $q_2$ representada por $\displaystyle\frac{c}{d}$, con $a,b,c,d\in\mathbb{Z}$. Se define la relación: $\sim = \left\lbrace (q_1,q_2) ~|~ a.d=c.b \right\rbrace$ donde $q_{1}\sim q_{2}$ se lee como "$q_{1}$ es una fracción equivalente a $q_{2}$".
+
+	\end{enumerate}
+	%\end{multicols}
+
+
+	\exercise Averiguar si las siguientes relaciones son de orden amplio u orden estricto y demostrarlo
+	%\begin{multicols}{2}
+	\begin{enumerate} [label=(\alph*)]
+		\item Dada la relación $R$ definida en $\mathbb{R}$, se establece la relación como "$x$ es menor o igual que $y$" donde $x\mathrel{R}y$ se anota $x\leq y$ definida de la forma $R = \left\lbrace (x,y) ~|~ \exists k \in [0,+\infty) ~~( y=x+k ) \right\rbrace$
+		\answer Relación de orden amplio (transitiva, antisimétrica, reflexiva) 
+
+		\item Dada la relación $R$ definida en $\mathbb{R}$, se establece la relación como "$x$ es divisor de $y$" donde $x\mathrel{R}y$ se anota $x~|~y$ definida de la forma $R = \left\lbrace (x,y) ~|~ \exists n \in \mathbb{N} ~~( y=n.x ) \right\rbrace$
+		\answer Relación de orden amplio (transitiva, antisimétrica, reflexiva)
+
+		\item Dados dos conjuntos $A$ y $B$ se define la relación "$A$ es subconjunto de en $B$" donde $x\mathrel{R}y$ se anota $A\subseteq B$ definida de la forma $R = \left\lbrace (A,B) ~|~ \forall x \in A ~~( x\in A \to x\in B) \right\rbrace$
+		\answer Relación de orden amplio (transitiva, antisimétrica, reflexiva)
+		
+		\item Dada la relación $R$ definida en $\mathbb{R}$, se establece la relación "$x$ es menor que $y$" donde $x\mathrel{R}y$ se anota $x<y$ definida de la forma $R = \left\lbrace (x,y) ~|~ \exists k \in (0,+\infty) ~~(y=x+k)  \right\rbrace$
+		\answer Relación de orden estricto (transitiva, asimétrica e irreflexiva)
+	\end{enumerate}
+	%\end{multicols}
+
+
+	\exercise Considerando el siguiente árbol genealógico: \\ \begin{center} \includegraphics[height=5cm]{familia.png} \end{center}
+	%\begin{multicols}{2}
+	\begin{enumerate} [label=(\alph*)]
+		\item Verificar que la relación "x tiene el mismo color de pelo que y" es una relación de equivalencia y representarla con un grafo. Indicar las clases de equivalencia y el conjunto cociente.
+
+		\item Verificar que la relación "x nació en el mismo país que y" es una relación de equivalencia y representarla con un grafo. Indicar las clases de equivalencia y el conjunto cociente.
+		
+		\item Verificar que la relación "x es descendiente de y" es una relación de orden estricto parcial. Representar la relación en un diagrama de Hasse.
+		
+		\item Explicar porque la relación "x es de la misma edad o mayor que y" NO ES una relación de orden amplio.
+		\answer Porque no es antisimétrica. (Mirta)$\mathrel{R}$(José) $\land$ (José)$\mathrel{R}$(Mirta) pero José$\neq$Mirta. También se puede verificar con Luna, Gina y Elena, que tienen la misma edad.
+	
+	\end{enumerate}
+	%\end{multicols}
+
+\end{enumerate}
+
+\end{document}
