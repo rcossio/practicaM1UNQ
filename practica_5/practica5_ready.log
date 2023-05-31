@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.6)  26 MAY 2023 22:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.6)  30 MAY 2023 21:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -518,24 +518,48 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<func1.png, id=66, 460.72125pt x 387.4475pt>
+<func1.png, id=65, 460.72125pt x 387.4475pt>
 File: func1.png Graphic file (type png)
 <use func1.png>
-Package pdftex.def Info: func1.png  used on input line 134.
-(pdftex.def)             Requested size: 230.36006pt x 193.72327pt.
- [3 <./func1.png>] [4] [5] [6] [7]
-(./practica5_ready.aux)
+Package pdftex.def Info: func1.png  used on input line 121.
+(pdftex.def)             Requested size: 156.49014pt x 131.60034pt.
+<func2.png, id=67, 234.1247pt x 145.29282pt>
+File: func2.png Graphic file (type png)
+<use func2.png>
+Package pdftex.def Info: func2.png  used on input line 122.
+(pdftex.def)             Requested size: 156.49014pt x 97.11954pt.
+<func3.png, id=68, 159.59625pt x 165.61874pt>
+File: func3.png Graphic file (type png)
+<use func3.png>
+Package pdftex.def Info: func3.png  used on input line 123.
+(pdftex.def)             Requested size: 156.49014pt x 162.39622pt.
+<func4.png, id=69, 164.86594pt x 111.41624pt>
+File: func4.png Graphic file (type png)
+<use func4.png>
+Package pdftex.def Info: func4.png  used on input line 124.
+(pdftex.def)             Requested size: 156.49014pt x 105.75983pt.
+ [3 <./func1.png> <./func2.png> <./func3.png> <./func4.png>]
+Overfull \vbox (7.17091pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (17.35182pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (7.17091pt too high) has occurred while \output is active []
+
+
+[4] [5] [6] [7] [8] (./practica5_ready.aux)
 Package rerunfilecheck Info: File `practica5_ready.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11474 strings out of 480144
- 176681 string characters out of 5893198
- 494855 words of memory out of 5000000
- 29114 multiletter control sequences out of 15000+600000
- 471266 words of font info for 37 fonts, out of 8000000 for 9000
+ 11535 strings out of 480144
+ 177286 string characters out of 5893198
+ 505855 words of memory out of 5000000
+ 29133 multiletter control sequences out of 15000+600000
+ 471612 words of font info for 38 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 60i,9n,63p,431b,637s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,9n,63p,440b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -545,11 +569,12 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
 ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb>
-Output written on practica5_ready.pdf (7 pages, 129779 bytes).
+cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb>
+Output written on practica5_ready.pdf (8 pages, 162834 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 184 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 325 compressed objects within 4 object streams
+ 222 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
