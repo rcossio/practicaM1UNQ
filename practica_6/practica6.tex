@@ -91,6 +91,9 @@
 		\item ¿Cuántas palabras de 9 letras se pueden formar con las letras de la palabra lavarropa?
 		\answer Las permutaciones de las letras son $P(9,9)=9!$. Pero hay que eliminar las repeticiones de las letras A y R, por lo que se divide por $3!$ y $2!$ respectivamente. Por lo tanto el total de opciones es $\frac{9!}{3!.2!}=30240$.
 
+		\item A un local donde se alquilan bicicletas en el que hay 8 bicicletas disponibles, llega una persona que quiere alquilar 3 bicicletas ¿Cuántas formas distintas tiene el encargado de armar un grupo de 3 bicicletas para darle al nuevo cliente?
+		\answer 56. Es una combinación de 8 bicicletas tomadas de a 3, es decir, $C(8,3)=\binom{8}{3}=56$ opciones.
+
 		\item En una fiesta se encuentran 10 hombres y 8 mujeres. ¿De cuantas formas pueden integrarse en parejas de distinto género para bailar una pieza?
 		\answer 1814400. Primero se toman 8 hombres de los 10, es decir, $\binom{10}{8}=45$ opciones. Luego se asignan los hombres en 8 posiciones definidas por las mujeres, es decir, $P(8,8)=8!=40320$ alternativas. Por lo que las alternativas totales son $45.40320=1814400$.
 
@@ -110,6 +113,25 @@
 		\answer $\binom{15}{5}~7^{10}$. Primero ubicamos 5 bolillas en el casillero 4, es decir $\binom{15}{5}$. Luego, ubicamos las 10 bolillas restantes en los 7 casilleros restantes. Pero en vez de pensar que repartimos bolilla en los casilleros, pensaremos que repartimos casilleros en bolillas. De esta manera, los casilleros se pueden repetir en las 10 bolillas y el número será $P^r(7,10)=7^{10}$. El número total de posibilidades es $\binom{15}{5}.7^{10}$.
 
 		\item Si se consideran las distintas distribuciones de 15 bolillas en 8 casilleros numerados del 1 al 8, ¿en cuántas de dichas distribuciones el casillero 4 contiene exactamente 5 bolillas, si las bolillas son indistinguibles?
+		\answer La situación es equivalente a averiguar las distribuciones de 10 bolillas en 7 casilleros ya que hay un casillero y cinco bolillas de menos. Debido a que cada bolilla es indistinguible, el ejercicio es equivalente a seleccionar los 7 casilleros 10 veces y contabilizar las veces que salió cada casillero, es decir, es $C^R(7,10)=\binom{7+10-1}{10}=\binom{16}{10}$.
+
+		\item ¿Qué contraseña es más segura: una que consta de 4 números (0-9), o una que consta de 3 letras (a-z sin ñ))?
+		\answer La contraseña de 4 números tiene $10^4=10000$ posibilidades, mientras que la de 3 letras tiene $26^3=17576$ posibilidades. Por lo tanto, la contraseña de 3 letras es más segura.
+
+		\item ¿Cuántas 5-úplas formadas con las letras a, b, c, d contienen exactamente 3 veces	la letra c?
+		\answer 90. Primero se eligen las posiciones de las 3 letras c, es decir $\binom{5}{3}$ opciones. Luego, se eligen las letras a, b y d para las 2 posiciones restantes, es decir $3^{2}$ opciones. El número total de opciones es $\binom{5}{3}3^{2}=10.9=90$.
+
+		\item En un hospital con 7 entradas numeradas ingresaron 28 medicos/as con sus tarjetas de pase, que registran la entrada. ¿De cuántas formas pueden hacerlo? 
+		\answer $7^{28}$. En este caso conviene asociar las puertas al personal. Cada médico/a entró por una puerta, que puede ser cualquiera de las 7, por lo que hay $7^{28}$ opciones.
+
+		\item En una estación de subte hay 7 molinetes numerados. En un momento pasaron ingresaron 28 personas. ¿De cuántas formas pueden hacerlo si no nos importa el orden ni la identidad de las personas?
+		\answer 1344904. Sólo nos interesa contar la cantidad de veces que una persona pasó por cada molinete utilizando a las 28 personas como ocasiones de conteo. Se trata de una combinación de 7 molinetes en 28 veces, con repetición, es decir $C^{R}(7,28)=\binom{34}{28}=1344904$.
+
+		\item El ascensor de un edificio lleva 10 pasajeros y puede detenerse en cualquiera de los 12 pisos del mismo. ¿En cuántas formas pueden descender los 10 pasajeros (indistinguibles)?
+		\answer 352716. El ejercicio es similar a una combinación de 12 pisos en 10 pasajeros, es decir, $C^R(12,10)=\binom{21}{10}=352716$ opciones.
+
+		\item Una cafetería tiene una promoción que varía todos los dias. Según el día ofrece un tipo de café, medialunas de grasa o de manteca, jugo de naranja o limón. ¿Cuantos tipos de café debe ofrecer para que la promoción dure todo el mes?
+		\answer 8. Con 8 tipos de café hay $8.2.2=32$ variantes de la promoción. Notar que con 7 tipos de café no alcanza, ya que solo serían $7.2.2=28$ y algunos meses tienen 31 días.
 
 	\end{enumerate}
 	%\end{multicols}
@@ -166,8 +188,10 @@
 		\answer 264. Para que la suma de las cifras de par hay varias opciones: todas ellas deben ser pares (con $4.3.2=24$ opciones), sólo la primera cifra debe ser par (con $4.5.4=80$ opciones), sólo la segunda debe ser par (con $5.4.4=80$ opciones), o sólo la última debe ser par (con $5.4.4=80$ opciones). El total de opciones es $24+80+80+80=264$.
 
 		\item ¿Cuántos números distintos de 5 cifras y mayores que $10^4$ se pueden formar con las cifras 2, 7, y 0, si el 2 y el 7 se repiten 2 veces 
+		\answer 24. Hay 2 opciones, que el número sea 2---- o 7----. Para el primer caso hay $\frac{P(4,4)}{2!}=\frac{4!}{2!}=12$ opciones ya que el 7 está repetido. Para el segundo caso hay $\frac{P(4,4)}{2!}=\frac{4!}{2!}=12$ opciones ya que el 2 está repetido. El total de opciones es $12+12=24$.
 
 		\item ¿Cuántos números distintos de 3 cifras pueden formarse con los dígitos del 1 al 8, si estos pueden repetirse?
+		\answer 512. Hay 8 opciones para cada cifra, por lo que el total de opciones es $8.8.8=8^3=512$, o bien es una permutación con reposición $P^R(8,3)=8^3=512$.
 
 	\end{enumerate}
 	%\end{multicols}
