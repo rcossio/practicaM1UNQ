@@ -55,7 +55,7 @@ for line in input_lines:
     else:
         output_string += line
 
-output_string += '\\vspace{20pt} \n \\textbf{Respuestas}'
+output_string += '\\vspace{20pt} \n \\textbf{RESPUESTAS}'
 output_string += '\\begin{enumerate}'
 for exercise in answers_dict.keys():
     output_string += '\\exercise'

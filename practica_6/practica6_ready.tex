@@ -1,0 +1,158 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=1.5cm]{geometry}
+%\documentclass[11pt]{article}
+%\usepackage[paperwidth=9cm,paperheight=60cm,margin=0.4cm]{geometry}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{graphicx}
+%Links
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+%Simbolos matemáticos
+\usepackage{amsmath}
+\usepackage{amssymb}
+%Enumeracion
+\usepackage{enumitem}
+%Páginas sin numeración
+\pagestyle{empty}
+%Interlineado
+\renewcommand{\baselinestretch}{1.5}
+%Arreglar comillas
+\usepackage [autostyle]{csquotes}
+\MakeOuterQuote{"}
+%Macros
+\newcommand{\Item}{\item[\stepcounter{enumii}$\blacktriangleright$\textbf{(\alph{enumii})}]} %Negrita en algunos items
+\newcommand{\answer}{\item[**]}
+\newcommand{\exercise}{\item}
+%Logic macros
+\newcommand{\then}{\to}
+\newcommand{\eq}{\leftrightarrow}
+\newcommand{\xor}{\veebar}
+\newcommand{\nor}{\downarrow}
+\newcommand{\nimply}{\nrightarrow}
+\newcommand{\nand}{\uparrow}
+\newcommand{\Then}{\Rightarrow}
+\newcommand{\Eq}{\Leftrightarrow}
+\begin{document}
+\noindent \hrulefill 
+\vspace{-7pt}
+\begin{center} 
+	\textbf{ Práctica 6: Técnicas de conteo y número combinatorio} \\
+	Comisión: Rodrigo Cossio-Pérez y Leonardo Lattenero
+\end{center}
+\vspace{-10pt}
+\hrulefill
+\begin{enumerate}
+	\exercise Un turista debe trasladarse de una ciudad a otra y puede optar por viajar en avión, ómnibus o tren y en cada uno de esos medios puede elegir viajar en primera clase o en clase turista:
+	%\begin{multicols}{2}
+	\begin{enumerate} [label=(\alph*)]
+		\item ¿De cuántas maneras distintas puede realizar el viaje?
+		\item Si el turista decide visitar Buenos Aires, Rosario, Córdoba, Mendoza y Salta (en ese orden) contando con las mismas opciones de transporte, ¿de cuántas maneras puede realizar el itinerario?
+		\item Como el ítem anterior, pero suponiendo que en ómnibus hay sólo una clase
+	\end{enumerate}
+	%\end{multicols}
+	\exercise Resolver los siguientes problemas %random
+	%\begin{multicols}{2}
+	\begin{enumerate} [label=(\alph*)]
+		\item La cerradura de una caja de caudales se compone de tres anillos, cada uno de los cuales está marcado con 20 letras distintas. ¿Cuál es el máximo número de intentos para abrirla que resulten infructuosos?
+		\item Para confeccionar un examen, se dispone de 3 problemas de geometría, 4 de combinatoria y 2 de álgebra. De cuántas maneras pueden ordenarse los problemas si los que corresponden a un mismo tema deben aparecer en forma consecutiva?
+		\item ¿Cuántas banderas diferentes de 3 bandas horizontales de distinto color puede formarse con verde, rosa, azul, blanco, amarillo y negro?
+		\item ¿Cuántas palabras de 9 letras se pueden formar con las letras de la palabra lavarropa?
+		\item A un local donde se alquilan bicicletas en el que hay 8 bicicletas disponibles, llega una persona que quiere alquilar 3 bicicletas ¿Cuántas formas distintas tiene el encargado de armar un grupo de 3 bicicletas para darle al nuevo cliente?
+		\item En una fiesta se encuentran 10 hombres y 8 mujeres. ¿De cuantas formas pueden integrarse en parejas de distinto género para bailar una pieza?
+		\item En una fiesta se encuentran 18 personas. ¿De cuantas formas pueden integrarse en parejas para bailar una pieza?
+		\item Para integrar una comisión, se deben elegir 4 personas entre un grupo formado por 8 hombres y 5 mujeres. ¿De cuántas formas puede hacerse?
+		\item Para integrar una comisión, se deben elegir 4 personas entre un grupo formado por 8 hombres y 5 mujeres. ¿De cuántas formas puede hacerse si se establece la condición de que por lo menos 2 de los miembros deben ser mujeres?
+		\item ¿Cuántos grupos de 6 hombres pueden formarse con 4 oficiales y 8 soldados de modo que: en cada grupo haya por lo menos un oficial?
+		\item Si se consideran las distintas distribuciones de 15 bolillas en 8 casilleros numerados del 1 al 8, ¿en cuántas de dichas distribuciones el casillero 4 contiene exactamente 5 bolillas, si las bolillas son distintas?
+		\item Si se consideran las distintas distribuciones de 15 bolillas en 8 casilleros numerados del 1 al 8, ¿en cuántas de dichas distribuciones el casillero 4 contiene exactamente 5 bolillas, si las bolillas son indistinguibles?
+		\item ¿Qué contraseña es más segura: una que consta de 4 números (0-9), o una que consta de 3 letras (a-z sin ñ))?
+		\item ¿Cuántas 5-úplas formadas con las letras a, b, c, d contienen exactamente 3 veces	la letra c?
+		\item En un hospital con 7 entradas numeradas ingresaron 28 medicos/as con sus tarjetas de pase, que registran la entrada. ¿De cuántas formas pueden hacerlo? 
+		\item En una estación de subte hay 7 molinetes numerados. En un momento pasaron ingresaron 28 personas. ¿De cuántas formas pueden hacerlo si no nos importa el orden ni la identidad de las personas?
+		\item El ascensor de un edificio lleva 10 pasajeros y puede detenerse en cualquiera de los 12 pisos del mismo. ¿En cuántas formas pueden descender los 10 pasajeros (indistinguibles)?
+		\item Una cafetería tiene una promoción que varía todos los dias. Según el día ofrece un tipo de café, medialunas de grasa o de manteca, jugo de naranja o limón. ¿Cuantos tipos de café debe ofrecer para que la promoción dure todo el mes?
+	\end{enumerate}
+	%\end{multicols}
+	\exercise Calcular de cuántas maneras pueden sentarse 6 niños y 4 niñas en el cine en 10 asientos consecutivos, si:
+	%\begin{multicols}{2}
+	\begin{enumerate} [label=(\alph*)]
+		\item Todas las niñas desean sentarse juntas y lo mismo sucede con los niños.
+		\item Las niñas desean estar juntas y a los varones les da igual.
+		\item Daniela y Pedro no quieren estar juntos.
+	\end{enumerate}
+	%\end{multicols}
+	\exercise Resolver las siguientes situaciones sobre dígitos:
+	%\begin{multicols}{2}
+	\begin{enumerate} [label=(\alph*)]
+		\item ¿Cuántos números de tres cifras distintas puede formarse con los dígitos impares?
+		\item ¿Cuántos números capicúas de cinco cifras y que no comienzan con cero hay?
+		\item Considerando las cifras 0-5, ¿cuántos números hay de 4 cifras distintas que no arrancan con 0?
+		\item Considerando las cifras 0-5, ¿cuántos de 4 cifras distintas que no inician con 0 son menores que 3000?
+		\item Considerando las cifras 0-5, ¿cuántos de 4 cifras distintas son divisibles por 5 y no comienzan con 0?
+		\item Considerando los números de 5 cifras que se obtienen permutando los dígitos de 17283, ¿cuántos de ellos son impares?
+		\item Considerando los números de 5 cifras que se obtienen permutando los dígitos de 17283, de menor a mayor, ¿qué lugar ocupa el 23178?
+		\item Considerando los números de 5 cifras que se obtienen permutando los dígitos de 17283, de mayor a menor , ¿qué lugar ocupa el 83712?
+		\item ¿Cuántos números impares de 5 cifras distintas pueden formarse con los dígitos 1 a 9?
+		\item Con los dígitos del 1 a 9, ¿cuántos números de 5 cifras distintas pueden formarse si las dos primeras cifras son dígitos pares?
+		\item Con los dígitos del 1 a 9, ¿cuántos números de tres cifras distintas se puede formar con la condición de que la suma de sus cifras sea par?
+		\item ¿Cuántos números distintos de 5 cifras y mayores que $10^4$ se pueden formar con las cifras 2, 7, y 0, si el 2 y el 7 se repiten 2 veces 
+		\item ¿Cuántos números distintos de 3 cifras pueden formarse con los dígitos del 1 al 8, si estos pueden repetirse?
+	\end{enumerate}
+	%\end{multicols}
+	\exercise Tres parejas interpretan una danza que consiste en formar una ronda tomados de la mano. Calcular de cu ́antas maneras distintas podr ́ıan hacerlo si:
+	%\begin{multicols}{2}
+	\begin{enumerate} [label=(\alph*)]
+		\item No se fijan condiciones
+		\item Los integrantes de cada pareja desean estar juntos
+		\item Dos mujeres determinadas no deben estar juntas
+		\item Las personas de uno y otro sexo se colocan en forma alternada
+	\end{enumerate}
+	%\end{multicols}
+\end{enumerate}
+\vspace{20pt} 
+ \textbf{Respuestas}\begin{enumerate}\exercise\begin{enumerate} [label=(\alph*)]		\item 6. Por principio de multiplicación: $3 . 2 = 6$. 
+		\item 1296. Realiza 4 viajes y ante cada viaje tiene 6 opciones, por lo que las opciones totales serán: $6.6.6.6 = 6^4 = 1296$. Alternativamente se puede pensar que se seleccionan 6 opciones con repetición en 4 viajes, por lo que es $P^r(6,4)=6^4=1296$.
+		\item 625. Por principio de la suma, en cada viaje tiene 5 opciones: $ 2 + 2 + 1 = 5$. Como realiza 4 viajes, las opciones totales serán: $5.5.5.5 = 5^4 = 625$.  Alternativamente se puede pensar que se seleccionan 5 opciones con repetición en 4 viajes, por lo que es $P^r(5,4)=5^4=625$.
+\end{enumerate}\exercise\begin{enumerate} [label=(\alph*)]		\item 7999. Hay 20 opciones para cada anillo, por lo que las opciones totales son: $20.20.20 = 20^3 = 8000$. Sin embargo, en el peor de los casos el intento 8000 cuenta como exitoso, por lo que los intentos infructuosos son 7999. Alternativamente se puede pensar que se seleccionan 20 opciones con repetición en 3 anillos, por lo que es $P^r(20,3)=20^3=8000$. 
+		\item 1728. Hay 3 temas, por lo que se pueden ordenar de $3! = 6$ formas. En el tema de geometría $3! = 6$ formas de ordenar los problemas, en el de combinatoria hay $4!=24$ formas de ordenarlos, en el de álgebra hay $2!=2$ formas. Por lo que el total de opciones es $6.6.24.2 = 1728$
+		\item 120. Se deben ubicar 6 colores sin repetir en 3 posiciones, es decir. $P(6,3)=\frac{6!}{3!}=6.5.4=120$ opciones.
+		\item Las permutaciones de las letras son $P(9,9)=9!$. Pero hay que eliminar las repeticiones de las letras A y R, por lo que se divide por $3!$ y $2!$ respectivamente. Por lo tanto el total de opciones es $\frac{9!}{3!.2!}=30240$.
+		\item 56. Es una combinación de 8 bicicletas tomadas de a 3, es decir, $C(8,3)=\binom{8}{3}=56$ opciones.
+		\item 1814400. Primero se toman 8 hombres de los 10, es decir, $\binom{10}{8}=45$ opciones. Luego se asignan los hombres en 8 posiciones definidas por las mujeres, es decir, $P(8,8)=8!=40320$ alternativas. Por lo que las alternativas totales son $45.40320=1814400$.
+		\item 12504636144000. Se conformarán 9 parejas. Para la primera se eligen 2 personas de 18, es decir $\binom{18}{2}$ opciones. Para la segunda 2 de las 16 restantes, es decir $\binom{16}{2}$. Y así sucesívamente. Por lo tanto el número total de opciones es $\binom{18}{2}\binom{16}{2}\binom{14}{2} \cdots \binom{4}{2}\binom{2}{2}=\frac{18!}{(2!)^9}=12504636144000$.
+		\item 715. Se seleccionan 4 personas de las 13, es decir, $\binom{13}{4}=715$ opciones.
+		\item 365. Hay varios casos posibles: 2 mujeres en la comisión (con $\binom{5}{2}.\binom{8}{2}=10.28=280$ opciones), 3 mujeres en la comisión (con $\binom{5}{3}.\binom{8}{1}=10.8=80$ opciones), o 4 mujeres en la comisión (con $\binom{5}{4}=5$ opciones). El total de opciones es $280+80+5=365$.
+		\item 1196. Hay varios casos posibles: 1 oficial en el grupo (con $\binom{4}{1}.\binom{8}{5}=4.56=224$ opciones), 2 oficiales en el grupo (con $\binom{4}{2}.\binom{8}{4}=6.70=420$ opciones), 3 oficiales en el grupo (con $\binom{4}{3}.\binom{8}{3}=4.56=224$ opciones), o 4 oficiales en el grupo (con $\binom{4}{4}.\binom{8}{2}=1.28=28$ opciones). El total de opciones es $224+720+224+28=1196$. %REVISAR
+		\item $\binom{15}{5}~7^{10}$. Primero ubicamos 5 bolillas en el casillero 4, es decir $\binom{15}{5}$. Luego, ubicamos las 10 bolillas restantes en los 7 casilleros restantes. Pero en vez de pensar que repartimos bolilla en los casilleros, pensaremos que repartimos casilleros en bolillas. De esta manera, los casilleros se pueden repetir en las 10 bolillas y el número será $P^r(7,10)=7^{10}$. El número total de posibilidades es $\binom{15}{5}.7^{10}$.
+		\item La situación es equivalente a averiguar las distribuciones de 10 bolillas en 7 casilleros ya que hay un casillero y cinco bolillas de menos. Debido a que cada bolilla es indistinguible, el ejercicio es equivalente a seleccionar los 7 casilleros 10 veces y contabilizar las veces que salió cada casillero, es decir, es $C^R(7,10)=\binom{7+10-1}{10}=\binom{16}{10}$.
+		\item La contraseña de 4 números tiene $10^4=10000$ posibilidades, mientras que la de 3 letras tiene $26^3=17576$ posibilidades. Por lo tanto, la contraseña de 3 letras es más segura.
+		\item 90. Primero se eligen las posiciones de las 3 letras c, es decir $\binom{5}{3}$ opciones. Luego, se eligen las letras a, b y d para las 2 posiciones restantes, es decir $3^{2}$ opciones. El número total de opciones es $\binom{5}{3}3^{2}=10.9=90$.
+		\item $7^{28}$. En este caso conviene asociar las puertas al personal. Cada médico/a entró por una puerta, que puede ser cualquiera de las 7, por lo que hay $7^{28}$ opciones.
+		\item 1344904. Sólo nos interesa contar la cantidad de veces que una persona pasó por cada molinete utilizando a las 28 personas como ocasiones de conteo. Se trata de una combinación de 7 molinetes en 28 veces, con repetición, es decir $C^{R}(7,28)=\binom{34}{28}=1344904$.
+		\item 352716. El ejercicio es similar a una combinación de 12 pisos en 10 pasajeros, es decir, $C^R(12,10)=\binom{21}{10}=352716$ opciones.
+		\item 8. Con 8 tipos de café hay $8.2.2=32$ variantes de la promoción. Notar que con 7 tipos de café no alcanza, ya que solo serían $7.2.2=28$ y algunos meses tienen 31 días.
+\end{enumerate}\exercise\begin{enumerate} [label=(\alph*)]		\item 34560. Hay dos grupos (niñas y niños), por lo que hay $2!=2$ formas de ubicarlos. En el grupo de niñas hay $4!=24$ formas de ubicarlas, y en el grupo de niños hay $6!=720$ formas. Por lo que las opciones totales son $2.24.720=34560$.
+		\item 120960. El grupo de niñas puede considerarse como un bloque a distribuir entre los niños. Los 6 niños más el bloque de niñas se pueden distribuir de $P(7,7)=7!=5040$ formas. Además, dentro del bloque las niñas pueden distribuirse de $P(4,4)=4!=24$ formas. Por lo que las opciones totales son $5040.24=120960$.
+		\item 2903040. Primero analizamos las opciones en las que Daniela y Pedro se sientan juntos. Pedro y Daniela conformarían un bloque con $P(2,2)=2!=2$ opciones. Además el bloque se puede distribuir entre los/as restantes niños/as. Las posibilidades son 8 niños/as más el bloque Daniela-Pedro. Por lo que las opciones totales son $P(9,9).P(2,2)=9!.2!=725760$. Luego contamos las opciones de distribuir los 10 niños, es decir, $P(10,10)=3628800$. Finalmente las opciones de que Pedro y Daniela se sienten separados son $P(10,10)-P(9,9).P(2,2)=3628800-725760=2903040$.
+\end{enumerate}\exercise\begin{enumerate} [label=(\alph*)]		\item 125. Hay 5 dígitos impares (1,3,5,7,9). Por principio de multiplicación, en la primera cifra hay 5 opciones, en la segunda 4 y en la tercera 3, por lo que las opciones totales son: $5.4.3 = 60$. Alternativamente se puede pensar que se seleccionan 3 opciones sin repetición en 5 posibles, por lo que es $P(5,3)=\frac{5!}{(5-3)!}=\frac{5!}{2!}=60$.
+		\item 900. Hay 9 opciones para la primera cifra (del 1 al 9), 10 para la segunda (del 0 al 9), 10 para la tercera (del 0 al 9), 1 para la cuarta (la misma que la segunda) y 1 para la quinta (la misma que la primera). Por lo tanto, las opciones totales son: $9.10.10.1.1=900$.
+		\item 300. Hay 5 opciones para la primera cifra (del 1 al 5) y luego 5 opciones para las restantes (del 0 al 5, excepto el número ya elegido) que deben elegirse sin repetir en 3 posiciones (las restantes para formar al número). Por lo tanto, el número total de opciones es: $5.P(5,3)= 5. \frac{5!}{(5-3)!}= 5. \frac{5!}{2!} = 5.60=300$.
+		\item 120. Para la primer cifra hay 2 opciones (1 o 2). Luego 5 opciones para las restantes (del 0 al 5, excepto el número ya elegido) que deben elegirse sin repetir en 3 posiciones (las restantes para formar al número). Por lo tanto, el número total de opciones es: $2.P(5,3)= 2. \frac{5!}{(5-3)!}= 2. \frac{5!}{2!} = 2.60=120$.
+		\item 108. Hay que utilizar el principio de la adición. Para que el número sea divisible por 5, la última cifra debe ser 0 o 5. Si la última cifra es 0, hay 5 opciones para la primera cifra (del 1 al 5) y luego 4 opciones para las restantes en 2 posiciones sin repetir, es decir, $5.P(4,2)=5.\frac{4!}{(4-2)!}=5.12=60$. Si la última cifra es 5, hay 4 opciones para la primera cifra (del 1 al 4) y luego 4 opciones para las restantes en 2 posiciones sin repetir, es decir, $4.P(4,2)=4.\frac{4!}{(4-2)!}=4.12=48$. Por lo tanto, el número total de opciones es: $60+48=108$.
+		\item 72. Para la ultima cifra hay 3 opciones (1,3,7) y luego 4 opciones para las restantes en 4 posiciones sin repetir, es decir, $3.P(4,4)=3.4!=3.24=72$.
+		\item Posición 31. Contamos las opciones de que el numero sea menor o igual. Para que el numero sea menor igual debería ser $1----$ que tiene $P(4,4)=4!=24$ opciones. O bien $21---$ que tiene $P(3,3)=3!=6$ opciones. O bien el propio $23178$ que tiene $1$ opción. Por lo que el numero total de opciones, que también es la posición del 23178, es $24+6+1=31$.
+		\item Posición 8. Contamos las opciones de que el número sea mayor o igual. Una opción es que sea $87---$ que tiene $P(3,3)=3!=6$ opciones. Otra opción es que sea $837--$ con $P(2,2)=2!=2$ opciones (esta opción incluye al 83712). El número total de opciones, que es igual a la posición del número, será $6+2=8$.
+		\item 8400. En la última cifra hay 5 opciones (1,3,5,7,9). Luego, queda definir las 4 cifras restantes con los 8 digitos que quedan, es decir, $P(8,4)=\frac{8!}{4!}=8.7.6.5=1680$ opciones. El total de opciones será $5.1680=8400$
+		\item 2520. Primero definimos las dos primeras cifras a partir de los 4 dígitos pares (2,4,6,8), es decir, $4.3=12$ opciones. Luego definimos las 3 cifras restantes con los 7 digitos que quedan, es decir, $P(7,3)=\frac{7!}{4!}=7.6.5=210$ opciones. El total de opciones será $12.210=2520$.
+		\item 264. Para que la suma de las cifras de par hay varias opciones: todas ellas deben ser pares (con $4.3.2=24$ opciones), sólo la primera cifra debe ser par (con $4.5.4=80$ opciones), sólo la segunda debe ser par (con $5.4.4=80$ opciones), o sólo la última debe ser par (con $5.4.4=80$ opciones). El total de opciones es $24+80+80+80=264$.
+		\item 24. Hay 2 opciones, que el número sea 2---- o 7----. Para el primer caso hay $\frac{P(4,4)}{2!}=\frac{4!}{2!}=12$ opciones ya que el 7 está repetido. Para el segundo caso hay $\frac{P(4,4)}{2!}=\frac{4!}{2!}=12$ opciones ya que el 2 está repetido. El total de opciones es $12+12=24$.
+		\item 512. Hay 8 opciones para cada cifra, por lo que el total de opciones es $8.8.8=8^3=512$, o bien es una permutación con reposición $P^R(8,3)=8^3=512$.
+\end{enumerate}\exercise\begin{enumerate} [label=(\alph*)]		\item 120. Hay $P(6,6)=6!=720$ formas de ordenar a 6 personas. Sin embargo, como están en ronda cada arreglo tiene 6 formas equivalentes (ABCDEF, BCDEFA, CDEFAB, DEFABC, EFABCD, FABCDE). Por lo que el número de formas de formar la ronda es $\frac{6!}{6}=120$. Adicionalmente se puede considerar que un arreglo ciclico de 6 personas se calcula como $P(5,5)=5!=120$. Otra ultima manera de verlo es asumir que se inicia con una persona arbitrariamente (A-----) y luego se eligen las 5 restantes en $P(5,5)=5!=120$ formas.
+		\item 16. Para ubicar cada pareja hay $\frac{P(3,3)}{3}=2$ opciones, que son AABBCC y AACCBB. Todas las otras formas son redundantes. Luego hay que ubicar a las personas dentro de cada pareja, es decir, $2.2.2=8$ opciones ya que son 3 parejas. Por lo tanto las opciones totales son $2.8=16$.
+		\item 72. Primero contamos las opciones de que estén juntas. Si pensamos a las mujeres como un bloque que inicia la ronda MM---- tenemos que distribuir 4 personas con $P(4,4)=4!=24$ alternativas más la propia organización del bloque con $P(2,2)=2!=2$ alternativas. Por lo que el número total de alternativas es $24.2=48$ de que estén juntas. Si no se fijan condiciones hay $P(5,5)=5!=120$ alternativas. Por lo que la cantidad de alternativas de que estén separadas es $120-48=72$.
+		\item Asumiendo un inicio arbitrario de la ronda, tal como M-----. Hay que ubicar a 3 hombres y 2 dos mujeres. Por lo tanto $P(3,3).P(2,2)=3!.2!=6.2=12$ posibilidades.
+\end{enumerate}\end{enumerate}\end{document}
