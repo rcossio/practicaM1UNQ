@@ -368,12 +368,15 @@
 		\item $\exists x \in \mathbb{R}: x+3 < 6$
 		\item $\forall x \in \mathbb{Z}: x-5 < 8$ 
 		\item Dado $U = \{1,2,3,4\}$ y los predicados $P(x)$:\textit{"$x$ es múltiplo de 2"} y $Q(x)$:\textit{$x \leq 3$}, determinar el valor de $\left(\exists x: P(x) \land  Q(x) \right) \land \left(\forall x: P(x) \lor  Q(x) \right) \land  \left(\forall x: P(x) \then  Q(x) \right)$
-		\item Dadas dos variables $x,y \in \{1,2,3\}$. Hallar el valor de verdad de $\left(\forall x \exists y: x+y = 2 \right) \lor \neg \left(\forall x \exists y: x+y = 4 \right) \lor \left(\forall x \forall y: x+y \geq  4 \right)$
-		\item $\forall x \in \mathbb{R} \exists y \in \mathbb{R}:  x+y = 1 $ 
-		\item $\exists x \in \mathbb{N} \forall y \in \mathbb{N}:  x > y  \land   x^2 < y $ 
-		\item $\forall x \in \mathbb{R} \forall y \in \mathbb{R}:  x-y \leq  0  \then   x < y+2 $ 
-		\item Dados $x,y,z \in \mathbb{R}$, hallar el valor de verdad de $\forall x \forall y \exists z: x < y  \then   x < z < y $ 
-		\item Dados $x,y,z \in \mathbb{R}$, hallar el valor de $\exists x \exists y \exists z: x=y \land  y=z \then  x\neq  z $ 
+		\item Dadas dos variables $x,y \in \{1,2,3\}$. Hallar el valor de verdad de $\left(\forall x ~\exists y: x+y = 2 \right) \lor \neg \left(\forall x \exists y: x+y = 4 \right) \lor \left(\forall x \forall y: x+y \geq  4 \right)$
+		\item $\forall x \in \mathbb{R} ~\exists y \in \mathbb{R}:  x+y = 1 $ 
+		\item $\exists x \in \mathbb{N} ~ \forall y \in \mathbb{N}:  x > y  \land   x^2 < y $ 
+		\item $\forall x \in \mathbb{R} ~\forall y \in \mathbb{R}:  x-y \leq  0  \then   x < y+2 $ 
+		\item Dados $x,y,z \in \mathbb{R}$, hallar el valor de verdad de $\forall x ~\forall y ~\exists z: x < y  \then   x < z < y $ 
+		\item Dados $x,y,z \in \mathbb{R}$, hallar el valor de $\exists x ~\exists y ~\exists z: x=y \land  y=z \then  x\neq  z $ 
+		\item Dado $U = \{1,2,3\}$ y el predicado $P(x): x-2=0$, determinar el valor de $\left(\exists x: P(x)\right)\land\left(\forall y \forall z: P(y) \land P(z) \then y=z \right)$
+		\item Dado $U = \{1,2,3\}$ indicar el valor de verdad de $\exists ! x: x^2 < 3$
+		\item Dado $U = \{1,2,3\}$ indicar el valor de verdad de $\exists ! x: x^2 > x$
 	\end{enumerate}
 	\exercise Averiguar si los siguientes razonamientos son válidos y, en el caso de que tengan un contexto, evaluar su solidez.
 	\begin{multicols}{2}
@@ -391,9 +394,9 @@
 	\end{multicols}
 	\exercise Resuelve los siguientes ejercicios variados
 	\begin{enumerate} [label=(\alph*)]
-		\item Dado el esquema proposicional $F(x): -x<1 \then x>5$ donde $x$ es un número entero, encontrar dos constantes para $x$ tales que se conviertan en una proposicion verdadera y otros dos para que sea falsa.
-		\item Analizar si las siguientes proposiciones son equivalentes: $\left(\exists x: p(x)\right) \land \left( \forall x: p(x) \then q(x) \right)$ con $\exists x: q(x)$.
-		\item Utilizando el predicado $P(x) = 2x+1 >2$ con el conjunto $U=\{1,2,3\}$, encontrar por lo menos cinco proposiciones verdaderas.
+		\item Dado el esquema proposicional $F(x): -x<1 \then x>5$ donde $x \in \mathbb{Z}$, encontrar dos constantes para $x$ tales que se conviertan en una proposicion verdadera y otros dos para que sea falsa.
+		\item Analizar si las proposiciones $\left(\exists x: P(x)\right) \land \left( \forall x: P(x) \then Q(x) \right)$ es equivalente a $\exists x: Q(x)$.
+		\item Utilizando el predicado $P(x): 2x+1 >2$ con el conjunto $U=\{1,2,3\}$, encontrar por lo menos cinco proposiciones verdaderas.
 	\end{enumerate}
 	\iffalse
 	\exercise A partir del webinar \href{https://youtu.be/kU3_XLfn4jo}{La lógica y los circuitos}, responder:
@@ -610,6 +613,9 @@
 		\item La proposición es verdadera. Como $x \leq y < y+2$, si $x$ cumple el antecedente $x \leq  y$, seguro cumple el consecuente $x < y+2$. 
 		\item Verdadero, si elegimos $z=\displaystyle\frac{x+y}{2}$ (el promedio), cumplirá la condición. F, por las propiedades de la igualdad, que se cumplen para todos los número reales.
 		\item Falso, por las propiedades de la igualdad, que se cumplen para todos los número reales.
+		\item Verdadero. $\left(\exists x: P(x)\right)$ es verdadero y se pueden probar las 9 combinaciones de valores de $y$ y $z$ para demostrar  que $\left(\forall y ~\forall z: P(y) \land P(z) \then y=z \right)$ también.
+		\item Verdadero ya que sólo $P(1)$ es verdadero
+		\item Falso ya que $P(2)$ y $P(3)$ son verdaderas
 \end{enumerate}\exercise\begin{enumerate} [label=(\alph*)]		\item Razonamiento válido. \\ \DReasoning{$\neg \exists x: \neg P(x) \land  Q(x)$; $\forall x:  P(x) \then  R(x)$; $Q(a)$}{$\forall x: \neg( \neg P(x) \land Q(x))$ ~~~(neg. cuantif.); $\neg( \neg P(a) \land Q(a))$ ~~~(part. en $a$); $P(a) \lor \neg Q(a)$ ~~~(De Morgan); $P(a)$ ~~~(mod. toll. pon.); $P(a) \then  R(a)$ ~~~(part. en $a$)}{$R(a)$ ~~~(mod. pon.)}
 		\item \DReasoning{$\forall x: P(x) \then  Q(x) \land  R(x)$; $\forall x: R(x) \lor  S(x) \then  T(x)$; $P(a)$}{$P(a) \then  Q(a) \land  R(a)$ ~~~(part. en $a$); $Q(a) \land  R(a)$ ~~~(mod. pon.); $R(a)$ ~~~(simplif.); $R(a) \lor  S(a)$ ~~~(adición); $R(a) \lor  S(a) \then  T(a)$ ~~~(part. en $a$)}{$T(a)$ ~~~(mod. pon.)}
 		\item \DReasoning{$\forall x\forall y\forall z:  P(x,y)\land P(y,x) \then  (P(x,z)\eq P(y,z)) $; $P(a,b)$; $P(b,c)$; $P(b,a)$}{$P(a,b)\land P(b,a) \then  (P(a,c)\eq P(b,c))$ ~~~(part. $x=a$, $y=b$, $z=c$);$P(a,c)\eq P(b,c)$ ~~~(mod. ponens)}{$P(a,c)$ ~~~(mod. pon. del $\eq$)}

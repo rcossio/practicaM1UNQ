@@ -813,23 +813,32 @@
 		\item Dado $U = \{1,2,3,4\}$ y los predicados $P(x)$:\textit{"$x$ es múltiplo de 2"} y $Q(x)$:\textit{$x \leq 3$}, determinar el valor de $\left(\exists x: P(x) \land  Q(x) \right) \land \left(\forall x: P(x) \lor  Q(x) \right) \land  \left(\forall x: P(x) \then  Q(x) \right)$
 		\answer Como $\left(\forall x: P(x) \then  Q(x) \right)$ es falsa, toda la proposición es falsa
 
-		\item Dadas dos variables $x,y \in \{1,2,3\}$. Hallar el valor de verdad de $\left(\forall x \exists y: x+y = 2 \right) \lor \neg \left(\forall x \exists y: x+y = 4 \right) \lor \left(\forall x \forall y: x+y \geq  4 \right)$
+		\item Dadas dos variables $x,y \in \{1,2,3\}$. Hallar el valor de verdad de $\left(\forall x ~\exists y: x+y = 2 \right) \lor \neg \left(\forall x \exists y: x+y = 4 \right) \lor \left(\forall x \forall y: x+y \geq  4 \right)$
 		\answer La proposiciòn es falsa. $\left(\forall x \exists y: x+y = 2 \right)$ es falsa ya que para $x=3$ no existe $y$ que cumpla, $\neg \left(\forall x \exists y: x+y = 4 \right)$ es falsa ya que para $x=1$ tenemos $y=3$, para $x=2$ tenemos $y=2$, para $x=3$ tenemos $y=1$ y finalmente $\left(\forall x \forall y: x+y \geq  4 \right)$ es falsa ya que para $x=2$ e $y=1$ no se cumple. 
 
-		\item $\forall x \in \mathbb{R} \exists y \in \mathbb{R}:  x+y = 1 $ 
+		\item $\forall x \in \mathbb{R} ~\exists y \in \mathbb{R}:  x+y = 1 $ 
 		\answer La proposición es verdadera. Dado un $x$ genérico puedo elegir $y=1-x$ que cumple la proposición. 
 
-		\item $\exists x \in \mathbb{N} \forall y \in \mathbb{N}:  x > y  \land   x^2 < y $ 
+		\item $\exists x \in \mathbb{N} ~ \forall y \in \mathbb{N}:  x > y  \land   x^2 < y $ 
 		\answer La proposición es falsa. Para un determinado $y$ debo elegir un $x$ que cumpla $x^2 < y < x$, es decir, $x^2 < x$. Ningún $x \in \mathbb{N}$ cumple esa condición.
 
-		\item $\forall x \in \mathbb{R} \forall y \in \mathbb{R}:  x-y \leq  0  \then   x < y+2 $ 
+		\item $\forall x \in \mathbb{R} ~\forall y \in \mathbb{R}:  x-y \leq  0  \then   x < y+2 $ 
 		\answer La proposición es verdadera. Como $x \leq y < y+2$, si $x$ cumple el antecedente $x \leq  y$, seguro cumple el consecuente $x < y+2$. 
 
-		\item Dados $x,y,z \in \mathbb{R}$, hallar el valor de verdad de $\forall x \forall y \exists z: x < y  \then   x < z < y $ 
+		\item Dados $x,y,z \in \mathbb{R}$, hallar el valor de verdad de $\forall x ~\forall y ~\exists z: x < y  \then   x < z < y $ 
 		\answer Verdadero, si elegimos $z=\displaystyle\frac{x+y}{2}$ (el promedio), cumplirá la condición. F, por las propiedades de la igualdad, que se cumplen para todos los número reales.
 
-		\item Dados $x,y,z \in \mathbb{R}$, hallar el valor de $\exists x \exists y \exists z: x=y \land  y=z \then  x\neq  z $ 
+		\item Dados $x,y,z \in \mathbb{R}$, hallar el valor de $\exists x ~\exists y ~\exists z: x=y \land  y=z \then  x\neq  z $ 
 		\answer Falso, por las propiedades de la igualdad, que se cumplen para todos los número reales.
+
+		\item Dado $U = \{1,2,3\}$ y el predicado $P(x): x-2=0$, determinar el valor de $\left(\exists x: P(x)\right)\land\left(\forall y \forall z: P(y) \land P(z) \then y=z \right)$
+		\answer Verdadero. $\left(\exists x: P(x)\right)$ es verdadero y se pueden probar las 9 combinaciones de valores de $y$ y $z$ para demostrar  que $\left(\forall y ~\forall z: P(y) \land P(z) \then y=z \right)$ también.
+
+		\item Dado $U = \{1,2,3\}$ indicar el valor de verdad de $\exists ! x: x^2 < 3$
+		\answer Verdadero ya que sólo $P(1)$ es verdadero
+
+		\item Dado $U = \{1,2,3\}$ indicar el valor de verdad de $\exists ! x: x^2 > x$
+		\answer Falso ya que $P(2)$ y $P(3)$ son verdaderas
 
 	
 	\end{enumerate}
@@ -872,13 +881,13 @@
 	\exercise Resuelve los siguientes ejercicios variados
 	\begin{enumerate} [label=(\alph*)]
 
-		\item Dado el esquema proposicional $F(x): -x<1 \then x>5$ donde $x$ es un número entero, encontrar dos constantes para $x$ tales que se conviertan en una proposicion verdadera y otros dos para que sea falsa.
+		\item Dado el esquema proposicional $F(x): -x<1 \then x>5$ donde $x \in \mathbb{Z}$, encontrar dos constantes para $x$ tales que se conviertan en una proposicion verdadera y otros dos para que sea falsa.
 		\answer Por ejemplo, 10 y 12 para que sea V, y -6 y -7 para que sea F. \href{https://youtu.be/DLsV_L097gE?t=687}{Resolución por MathLogic}.
 
-		\item Analizar si las siguientes proposiciones son equivalentes: $\left(\exists x: p(x)\right) \land \left( \forall x: p(x) \then q(x) \right)$ con $\exists x: q(x)$.
+		\item Analizar si las proposiciones $\left(\exists x: P(x)\right) \land \left( \forall x: P(x) \then Q(x) \right)$ es equivalente a $\exists x: Q(x)$.
 		\answer Las expresiones no son equivalentes. \href{https://youtu.be/WC7P8FMIHFw}{Resolución por Maria Alicia Piñeiro}.
 
-		\item Utilizando el predicado $P(x) = 2x+1 >2$ con el conjunto $U=\{1,2,3\}$, encontrar por lo menos cinco proposiciones verdaderas.
+		\item Utilizando el predicado $P(x): 2x+1 >2$ con el conjunto $U=\{1,2,3\}$, encontrar por lo menos cinco proposiciones verdaderas.
 		\answer Algunos ejemplos son $P(1)$, $P(2)$, $P(3)$, $\forall x: 2x+1>2$, $P(1) \land P(2)$, $\exists x: 2x+1 \leq 2$. \href{https://youtu.be/rnaCiSpVtP4?t=633}{Resolución por MathLogic}.
 
 	\end{enumerate}
