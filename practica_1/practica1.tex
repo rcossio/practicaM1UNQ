@@ -114,13 +114,13 @@
 		\answer Función interrogativa, no es proposición.
 
 		\item 5 es múltiplo de 2 
-		\answer Función informativa, es proposición. Su valor es falso ya que no se puede multiplicar a 2 por otro número entero y obtener 5. Más adelante se verá como escribir esto matemáticamente.
+		\answer Función informativa, es proposición. Es falsa.
 
 		\item Si estudiás continuamente, siempre vas a aprender cosas nuevas 
 		\answer Función informativa, es proposición. La proposición es verdadera pero tiene detalles discutibles. Para afirmar que para alguna persona es falsa deberiamos pensar en una persona que estudie continuamente pero que no aprenda cosas nuevas.
 
 		\item $x=6$ y $x+4=10$ 
-		\answer Función informativa, es proposición. Aunque sean simbolos matemáticos, esta proposición se puede leer como "El número x es seis y el número x sumado a 4 es igual a 10". Lo que hace que esto sea una proposición es que estamos afirmando las igualdades, que el número es igual a 6 y que sumado a 4 es igual a 10. La proposición es V.
+		\answer Función informativa, es proposición. Aunque sean simbolos matemáticos, esta proposición se puede leer como "El número $x$ es seis y el número $x$ sumado a 4 es igual a 10". Lo que hace que esto sea una proposición es que estamos afirmando las igualdades, que el número es igual a 6 y que sumado a 4 es igual a 10. La proposición es V.
 
 		\item $x+4$ 
 		\answer No es proposición. Se puede leer como "El número $x$ más 4" y no se afirma nada al respecto. Es similar al inciso de "En las aulas de la UNQ".
@@ -145,13 +145,13 @@
 		\answer $p\then q$ con $p$:"\textit{Estás en la estación Bernal}" y $q$:"\textit{Estás cerca de la UNQ}". Un equivalente es $\neg q \then \neg p$: "\textit{Si no estás cerca de la UNQ, no estás en la estación de Bernal}".
 
 		\item No es buen deportista pero sus notas son excelentes.
-		\answer $\neg p \land q$ con $p$:"\textit{Es buen deportista}" y $q$:"\textit{Sus notas son excelentes}". Un equivalente es $q \land \neg p$:"\textit{Sus notas son excelentes pero no es buen deportista}". Notar que linguisticamente las frases son distintas porque se le da distinta importancia relevancia al orden de las proposiciones, en la primera se rescata que es buen estudiante, en la segunda se condena que es mal deportista. En este caso la lógica no logra mostrar estas diferencias linguisticas. \href{https://youtu.be/HXzyX5XGPp8?t=503}{Resolución por Tu Profe en Linea}.
+		\answer $\neg p \land q$ con $p$:"\textit{Es buen deportista}" y $q$:"\textit{Sus notas son excelentes}". Un equivalente es $q \land \neg p$:"\textit{Sus notas son excelentes pero no es buen deportista}". Notar que linguísticamente las frases son distintas porque se le da distinta importancia relevancia al orden de las proposiciones, en la primera se rescata que es buen estudiante, en la segunda se condena que es mal deportista. En este caso la lógica no logra mostrar estas diferencias linguísticas. \href{https://youtu.be/HXzyX5XGPp8?t=503}{Resolución por Tu Profe en Linea}.
 
 		\item El caballo está galopando, o se detuvo y relinchó.
 		\answer $p \lor (q \land r)$ con $p$:"\textit{El caballo está galopando}", $q$:"\textit{El caballo de detuvo}" y $r$:"\textit{El caballo relinchó}". \href{https://youtu.be/TgwraosKUuY?t=70}{Resolución por Christian Omar Arias López}.
 
 		\item En la UNQ hay wi-fi si y sólo si hay luz.
-		\answer $p\eq q$ con $p$:"\textit{En la UNQ hay wi-fi}" y $q$:"\textit{Hay luz}". Un equivalente es $(p \then q) \land (q \then p)$:"\textit{Si en la UNQ hay wi-fi, hay luz.Si hay luz, en la UNQ hay wi-fi}".
+		\answer $p\eq q$ con $p$:"\textit{En la UNQ hay wi-fi}" y $q$:"\textit{Hay luz}". Un equivalente es $(p \then q) \land (q \then p)$:"\textit{Si en la UNQ hay wi-fi, hay luz. Si hay luz, en la UNQ hay wi-fi}".
 
 		\item Una de dos: o mañana lloverá o estará soleado. 
 		\answer $p \xor q$ con $p$:"\textit{Mañana lloverá}" y $q$:"\textit{Mañana estará soleado}". Un equivalente es $(p \land \neg q) \land (\neg p \land q)$:"\textit{Mañana lloverá y no estará soleado, o bien, mañana estará soleado y no lloverá}". 
@@ -496,10 +496,10 @@
 		\answer $\neg (p \land \neg q)$ con $p$:"\textit{Estudiamos}" y $q$:"\textit{Aprobamos}". Un equivalente es $\neg p \lor q$:"\textit{No estudiamos o aprobamos}". Otro equivalente es $p \then q$:"\textit{Si estudiamos, aprobamos}". \href{https://youtu.be/HXzyX5XGPp8}{Resolución por Tu Profe en Linea}.
 
 		\item No me gusta la pizza ni las empanadas. 
-		\answer $\neg p  \land  \neg q$ con $p$:"\textit{Me gusta la pizza}" y $q$:"\textit{Me gustan las empanadas}". Un equivalente es $p \downarrow  q$, que se lee igual:"\textit{No me gusta la pizza ni las empanadas}".
+		\answer $\neg p  \land  \neg q$ con $p$:"\textit{Me gusta la pizza}" y $q$:"\textit{Me gustan las empanadas}". Un equivalente es $p \downarrow  q$, que se lee igual:"\textit{Ni me gusta la pizza, ni me gustan las empanadas}".
 
 		\item Hoy no es jueves, ya que ayer no fue miércoles.
-		\answer Una manera inicial de plantearlo es $\neg q\then \neg p$ con $p$:"\textit{Hoy es jueves}" y $q$:"\textit{Ayer fue miércoles}". Sin embargo esto es equivalente a $p \then q$ que se lee "\textit{Si ayer fue miércoles, hoy es jueves}". La frase original no sólo nos indica la relación entre los días sino que afirma que \textit{ayer no fue miércoles}. Por lo que una manera más correcta de interpretarlo es $\neg q \land (\neg q\then \neg p)$.
+		\answer $\neg q \land (\neg q\then \neg p)$ con $p$:"\textit{Hoy es jueves}" y $q$:"\textit{Ayer fue miércoles}". Notar que no solo se debe indicar la relación $\neg q\then \neg p$, sino que también debemos afirmar que $\neg q$.
 
 		\item Si llueve traigo el impermeable y las botas. 
 		\answer $p \then  ( q  \land  r )$ con $p$:"\textit{Llueve}", $q$:"\textit{Traigo el impermeable}" y $r$:"\textit{Traigo las botas}". Un equivalente es $(p \then q) \land (p \then r )$:"\textit{Si llueve traigo el impermeable y si llueve traigo las botas}".
@@ -514,22 +514,22 @@
 		\answer $\neg p  \land  \neg q$ con $p$:"\textit{Caminamos con prisa}" y $q$:"\textit{Caminamos con pausa}". Un equivalente es $p \downarrow  q$:"\textit{Ni caminamos con prisa ni caminamos con pausa}"
 
 		\item Python es un lenguaje de programación interpretado, de propósito general y de alto nivel, por lo tanto resulta útil para procesar datos o automatizar tareas simples. 
-		\answer $( p  \land  q  \land  r ) \then  ( s \lor  t )$ con $p$:"\textit{Python es un lenguaje de programación interpretado}", $q$:"\textit{Python es un lenguaje de programación  de propósito general}", $r$:"\textit{Python es un lenguaje de programación de alto nivel}", $s$:"\textit{Python resulta útil para procesar datos}" y $t$:"\textit{Python resulta útil para automatizar tareas simples}".
+		\answer $( p  \land  q  \land  r ) \land ( p  \land  q  \land  r  \then   s \lor  t )$ con $p$:"\textit{Python es un lenguaje de programación interpretado}", $q$:"\textit{Python es un lenguaje de programación  de propósito general}", $r$:"\textit{Python es un lenguaje de programación de alto nivel}", $s$:"\textit{Python resulta útil para procesar datos}" y $t$:"\textit{Python resulta útil para automatizar tareas simples}".
 
 		\item Ir rápido equivale a ir despacio pero sin pausas. 
-		\answer Hay varias simbolizaciones posibles. Por ejemplo, primero reformulamos el enunciado para obtener proposiciones: "\textit{Que alguien vaya rápido equivale a que vaya despacio pero sin pausas}". Con las proposiciones $p$:"\textit{Alguien va rápido}", $\neg p$:"\textit{Alguien va despacio}" y $q$:"\textit{Alguien va con pausas}" obtenemos en símbolos $p \eq (\neg p \land \neg q)$.
+		\answer Hay varias simbolizaciones posibles. Por ejemplo, si reformulamos el enunciado para obtener proposiciones: "\textit{Voy rápido sí y solo si voy despacio y sin pausas}" con las proposiciones $p$:"\textit{Voy rápido}", $q$:"\textit{Voy despacio}" y $r$:"\textit{Voy con pausas}" obtenemos en símbolos $p \eq ( q \land \neg r)$.
 
 		\item O termino las tareas en la semana, con lo que tendría el fin de semana libre, o las termino durante el fin de semana, con lo que tendría que abastecerme de café o mate.  
-		\answer $( p \then  q ) \xor  ( r \then  ( s \lor  t) )$ con $p$:"\textit{Termino las tareas en la semana}", $q$:"\textit{Tendré el fin de semana libre}", $r$:"\textit{Termino las tareas durante el fin de semana}", $s$:"\textit{Tendría que abastecerme de café}" y $t$:"\textit{Tendría que abastecerme de mate}".
+		\answer $(p \xor q) \land ( p \then  q ) \land  ( r \then  ( s \lor  t) )$ con $p$:"\textit{Termino las tareas en la semana}", $q$:"\textit{Tendré el fin de semana libre}", $r$:"\textit{Termino las tareas durante el fin de semana}", $s$:"\textit{Tendría que abastecerme de café}" y $t$:"\textit{Tendría que abastecerme de mate}".
 
 		\item Para aprobar, basta dedicar tiempo y atención a la materia.  
-		\answer Primero reformulamos el enunciado:"\textit{Para que alguien apruebe, le debe dedicar tiempo y atención a la materia}". Entonces tenemos la proposición $( q  \land  r ) \then  p$ con $p$:"\textit{Alguien aprueba}", $q$:"\textit{Alguien le dedica tiempo a la materia}" y $r$:"\textit{Alguien le dedica atención a la materia}".
+		\answer Primero reformulamos el enunciado:"\textit{Si dedico tiempo y atención a la materia, entonces apruebo}". Entonces tenemos la proposición $( q  \land  r ) \then  p$ con $p$:"\textit{Apruebo}", $q$:"\textit{Dedico tiempo a la materia}" y $r$:"\textit{Dedico atención a la materia}".
 
 		\item Calavera no chilla y piola se la banca.
 		\answer Una opcion simple es $\neg p  \land  r$ con $p$:"\textit{Calavera chilla}" y $q$:"\textit{Piola se la banca}". Pero podríamos tener $( p\then q )  \land  ( r\then s )$ considerando $p$:"\textit{Alguien es calavera}", $q$:"\textit{Alguien chilla}", $q$:"\textit{Alguien es piola}" y $q$:"\textit{Alguien se la banca}"
 
 		\item Vine en tren y suspendieron el servicio, así que tengo que volver en colectivo o caminando.
-		\answer $( p  \land  q ) \then  ( r \lor  s )$ con $p$:"\textit{Vine en tren}", $q$:"\textit{Suspendieron el servicio}", $r$:"\textit{Tengo que volver en colectivo}" y $s$:"\textit{Tengo que volver caminando}".
+		\answer $( p  \land  q ) \land ( p  \land  q  \then  r \lor  s )$ con $p$:"\textit{Vine en tren}", $q$:"\textit{Suspendieron el servicio}", $r$:"\textit{Tengo que volver en colectivo}" y $s$:"\textit{Tengo que volver caminando}". Notar que además de enunciar la relacion de implicación entre las proposiciones se debe afirmar que se cumple el antecedente.
 
 		\item En un juego son importantes las mecánicas y la historia. Las mecánicas mantienen a la persona jugadora activa. La historia la mantiene interesada. 
 		\answer $( p  \land  q )  \land  r  \land  s $. $p$:"\textit{En un juego son importantes las mecánicas}", $q$:"\textit{En un juego es importantes la historia}", $r$:"\textit{Las mecánicas mantienen a la persona jugadora activa}" y $s$:"\textit{La historia la mantiene interesada}".
