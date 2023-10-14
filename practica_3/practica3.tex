@@ -1,116 +1,37 @@
-% Fuentes que no vi:
-% https://www.youtube.com/@AuxiRolando
-
-\documentclass[a4paper]{article}
-\usepackage[margin=1.5cm]{geometry}
-
-%\documentclass[11pt]{article}
-%\usepackage[paperwidth=9cm,paperheight=60cm,margin=0.4cm]{geometry}
-
-\usepackage{multicol}
-\usepackage{enumitem}
-\usepackage{graphicx}
-
-%Links
-\usepackage[colorlinks = true,
-            linkcolor = blue,
-            urlcolor  = blue,
-            citecolor = blue,
-            anchorcolor = blue]{hyperref}
-
-%Simbolos matemáticos
-\usepackage{amsmath}
-\usepackage{amssymb}
-
-%Manejo de argumentos en los comandos
-\usepackage{xparse}
-
-%Enumeracion
-\usepackage{enumitem}
-
-%Páginas sin numeración
-\pagestyle{empty}
-
-%Interlineado
-\renewcommand{\baselinestretch}{1.5}
-
-%Arreglar comillas
-\usepackage [autostyle]{csquotes}
-\MakeOuterQuote{"}
-
-%Macros
-\newcommand{\Item}{\item[\stepcounter{enumii}$\blacktriangleright$\textbf{(\alph{enumii})}]} %Negrita en algunos items
-\newcommand{\answer}{\item[**]}
-\newcommand{\exercise}{\item}
-
-%Logic macros
-\newcommand{\then}{\to}
-\newcommand{\eq}{\leftrightarrow}
-\newcommand{\xor}{\veebar}
-\newcommand{\nor}{\downarrow}
-\newcommand{\nimply}{\nrightarrow}
-\newcommand{\nand}{\uparrow}
-\newcommand{\Then}{\Rightarrow}
-\newcommand{\Eq}{\Leftrightarrow}
-\newcommand{\intersec}{\cap}
-\newcommand{\union}{\cup}
-\newcommand{\Delta}{\symdiff}
-\newcommand{\compl}[1]{\overline{#1}}
-\newcommand{\df}[2]{\displaystyle\frac{#1}{#2}}
-
-
-
-
-
-% Command to format each premise or reasoned proposition
-\NewDocumentCommand{\FormatItem}{m}{%
-    #1 \\[-4pt]
-}
-
-% Define the \Reasoning command
-\NewDocumentCommand{\Reasoning}{>{\SplitList{;}}m m}{%
-    \begin{minipage}[t]{\linewidth}
-    \ProcessList{#1}{\FormatItem} % Process each premise
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{2.2cm}{.5pt}\\[-8pt]
-    #2 \\[-8pt]% This is the conclusion
-    \end{minipage}%
-}
-
-% Define the \DReasoning command
-\NewDocumentCommand{\DReasoning}{>{\SplitList{;}}m >{\SplitList{;}}m m}{%
-    \begin{minipage}[t]{\linewidth}
-    \ProcessList{#1}{\FormatItem} % Process each premise
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{3cm}{.5pt}\\[-8pt]
-    \ProcessList{#2}{\FormatItem} % Process each reasoned proposition
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{3cm}{.5pt}\\[-8pt]
-    #3 \\[-8pt]% This is the conclusion
-    \end{minipage}%
-}
-
+\documentclass{template_practica}
 
 \begin{document}
 
-\noindent \hrulefill 
-\vspace{-7pt}
-\begin{center} 
-	\textbf{ Práctica 3: Relaciones} \\
-	Comisión: Rodrigo Cossio-Pérez y Leonardo Lattenero
-\end{center}
-\vspace{-10pt}
-\hrulefill \\
-\phantom{~} \\
-%\textbf{EJERCICIOS JR.}
+\practiceheader{Práctica 3: Relaciones}{Comisión: Rodrigo Cossio-Pérez y Leonardo Lattenero}
 
 \begin{enumerate}
 
-	\exercise Enunciado
-	\begin{multicols}{3}
-	\begin{enumerate} [label=(\alph*)]
-		\item Inciso
-		\answer Respuesta
+	\exercise Analizar las siguientes relaciones indicando dominio e imagen, graficandolas con el método indicado cuando se indique y estudiando sus propiedades.
+	\begin{enumcols}
+		\item $R=\{(x,y) \in A \times B ~|~ x+y=4\}$ con $A=\{1,2,3\}$ y $B=\{1,2,3,4,5\}$. Graficar mediante una tabla.
+        \item $R=\{(x,y) \in A \times B ~|~ y>x\}$ con $A=\{1,2,3\}$ y $B=\{1,2,3,4,5\}$. Graficar en el plano cartesiano.
+        \item $R=\{(X,Y) \in \power{C} \times \power{C} ~|~ X \intersec Y = \emptyset\}$ con $A=\{1,2,3\}$ y $B=\{1,2,3,4,5\}$ con $C=\{a,b\}$. Graficar mediante un grafico
+        \item $R=\{(x,y) \in \R^2 ~|~ x \in \mathbb{N} \}$. Graficar en un plano cartesiano.
+        \item $R=\{(x,y) \in \R^2 ~|~ y=x+1\}$. Graficar en un plano cartesiano.
+        \item La relación definida en $\R$ de forma que $R=\{(x,y) ~|~ y>x+1\}$. Graficar en un plano cartesiano.
+        \item $R=\{(x,y) \in \R^2 ~|~ x \geq 1 ~\land~ y \geq 2 \}$. Graficar en un plano cartesiano.
+        \item La relación $R \subseteq \R^2$ definida por $R=\{(x,y) ~|~ x>3 \land y>3\}$. Graficar en un plano cartesiano.
+        \item $R=\{(x,y) \in \R^2 ~|~ 1<x+y<4\}$. Graficar mediante un grafico
+        \item $R=\{(x,y) \in \R^2 ~|~ x\neq y\}$. Graficar en un plano cartesiano.
+        \item La relación definida en $A=\{a,b,c,d\}$ como $R=\{(a,a), (a,b), (b,a), (c,d)\}$. Graficar mediante un grafo.
+        \item La relación $R=\{(a,a),(b,b),(b,c),(c,d).(c,c),(d,d)\}$ definida en $A=\{a,b,c,d\}$. Graficar mediante un grafo.
+        \item $R=\{(a,a),(a,b),(b,a),(b,c),(c,b),(b,c)\}$ definida en $A=\{a,b,c,d\}$. Graficar mediante un grafo.
+        \item $R=\{(a,b) ~|~ a \text{ vive con } b\}$, definida en el conjunto de personas de Bernal.
+        \item $R=\{(a,b) ~|~ a \text{ conoce presencialmente a } b\}$, definida en el conjunto de personas de Argentina.
+        \item $R=\{(a,b) ~|~ a \text{ sabe de la existencia de } b\}$, definida en el conjunto de personas.
+        \item $R=\{(a,b) ~|~ a \text{ es descensiente de } b\}$, definida en el conjunto de personas.
+        \item $R=\{(a,b) ~|~ a \text{ es padre/madre de } b\}$, definida en el conjunto de personas.
+        \item $R=\{(a,b) ~|~ a \text{ sigue en las redes a } b\}$, definida en el conjunto de personas.
+        \item $R=\{ (x,y) ~|~ x \text{ le gana a } y \}$ definida en $A\{\text{piedra}, \text{papel}, \text{tijera}\}$. Graficar mediante un grafo.
+        \item $R=\{ (x,y) ~|~ x \text{ le gana o le empata a } y \}$ definida en $A\{\text{piedra}, \text{papel}, \text{tijera}\}$. Graficar mediante un grafo.
 
-	\end{enumerate}
-	\end{multicols}
+
+	\end{enumcols}
 
 
 \end{enumerate}
