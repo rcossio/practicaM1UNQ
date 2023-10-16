@@ -1,138 +1,14 @@
-% Fuentes que no vi:
-% https://www.youtube.com/@AuxiRolando
-
-\documentclass[a4paper]{article}
-\usepackage[margin=1.5cm]{geometry}
-
-%\documentclass[11pt]{article}
-%\usepackage[paperwidth=9cm,paperheight=60cm,margin=0.4cm]{geometry}
-
-\usepackage{multicol}
-\usepackage{enumitem}
-\usepackage{graphicx}
-
-%Links
-\usepackage[colorlinks = true,
-            linkcolor = blue,
-            urlcolor  = blue,
-            citecolor = blue,
-            anchorcolor = blue]{hyperref}
-
-%Simbolos matemáticos
-\usepackage{amsmath}
-\usepackage{amssymb}
-
-%Manejo de argumentos en los comandos
-\usepackage{xparse}
-
-%Enumeracion
-\usepackage{enumitem}
-
-%Páginas sin numeración
-\pagestyle{empty}
-
-%Interlineado
-\renewcommand{\baselinestretch}{1.5}
-
-%Arreglar comillas
-\usepackage [autostyle]{csquotes}
-\MakeOuterQuote{"}
-
-%Macros
-\newcommand{\Item}{\item[\stepcounter{enumii}$\blacktriangleright$\textbf{(\alph{enumii})}]} %Negrita en algunos items
-\newcommand{\answer}{\item[**]}
-\newcommand{\exercise}{\item}
-
-%Logic macros
-\newcommand{\then}{\to}
-\newcommand{\eq}{\leftrightarrow}
-\newcommand{\xor}{\veebar}
-\newcommand{\nor}{\downarrow}
-\newcommand{\nimply}{\nrightarrow}
-\newcommand{\nand}{\uparrow}
-\newcommand{\Then}{\Rightarrow}
-\newcommand{\Eq}{\Leftrightarrow}
-\newcommand{\intersec}{\cap}
-\newcommand{\union}{\cup}
-\newcommand{\symdiff}{\Delta}
-\newcommand{\compl}[1]{\overline{#1}}
-\newcommand{\df}[2]{\displaystyle\frac{#1}{#2}}
-\newcommand{\img}[2]{ \begin{minipage}[t]{\linewidth} \raisebox{-\height}{\includegraphics[width=#1]{#2}} \end{minipage} } % Include image in a minipage 
-\newcommand{\power}[1]{\mathcal{P}\left(#1\right)}
-
-
-% Command to format each premise or reasoned proposition
-\NewDocumentCommand{\FormatItem}{m}{%
-    #1 \\[-4pt]
-}
-
-% Define the \Reasoning command
-\NewDocumentCommand{\Reasoning}{>{\SplitList{;}}m m}{%
-    \begin{minipage}[t]{\linewidth}
-    \ProcessList{#1}{\FormatItem} % Process each premise
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{5.2cm}{.5pt}\\[-8pt]
-    #2 \\[-8pt]% This is the conclusion
-    \end{minipage}%
-}
-
-% Define the \DReasoning command
-\NewDocumentCommand{\DReasoning}{>{\SplitList{;}}m >{\SplitList{;}}m m}{%
-    \begin{minipage}[t]{\linewidth}
-    \ProcessList{#1}{\FormatItem} % Process each premise
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{3cm}{.5pt}\\[-8pt]
-    \ProcessList{#2}{\FormatItem} % Process each reasoned proposition
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{3cm}{.5pt}\\[-8pt]
-    #3 \\[-8pt]% This is the conclusion
-    \end{minipage}%
-}
-
-
-
-
-% Command to format each premise or reasoned proposition
-\NewDocumentCommand{\FormatItem}{m}{%
-    #1 \\[-4pt]
-}
-
-% Define the \Reasoning command
-\NewDocumentCommand{\Reasoning}{>{\SplitList{;}}m m}{%
-    \begin{minipage}[t]{\linewidth}
-    \ProcessList{#1}{\FormatItem} % Process each premise
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{2.2cm}{.5pt}\\[-8pt]
-    #2 \\[-8pt]% This is the conclusion
-    \end{minipage}%
-}
-
-% Define the \DReasoning command
-\NewDocumentCommand{\DReasoning}{>{\SplitList{;}}m >{\SplitList{;}}m m}{%
-    \begin{minipage}[t]{\linewidth}
-    \ProcessList{#1}{\FormatItem} % Process each premise
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{3cm}{.5pt}\\[-8pt]
-    \ProcessList{#2}{\FormatItem} % Process each reasoned proposition
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{3cm}{.5pt}\\[-8pt]
-    #3 \\[-8pt]% This is the conclusion
-    \end{minipage}%
-}
-
+\documentclass{template_practica}
 
 \begin{document}
 
-\noindent \hrulefill 
-\vspace{-7pt}
-\begin{center} 
-	\textbf{ Práctica 2: Teoría de conjuntos} \\
-	Comisión: Rodrigo Cossio-Pérez y Leonardo Lattenero
-\end{center}
-\vspace{-10pt}
-\hrulefill \\
-\phantom{~} \\
-%\textbf{EJERCICIOS JR.}
+\practiceheader{Práctica 2: Teoría de conjuntos}{Comisión: Rodrigo Cossio-Pérez y Leonardo Lattenero}
 
 \begin{enumerate}
 
 	\exercise Dados los conjuntos \\ $A=\{a,b\}$ ~~~~~~~~ $B=\{ \{a\}, \{b\} \}$ ~~~~~~~~ $C=\{ \{a\}, b, \{b\}, \{a,b\} \}$ \\ analizar cuáles de las siguientes afirmaciones son verdaderas:
-	\begin{multicols}{3}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}[3]
+		
 		\item $A=B$
 		\answer Falso
 
@@ -163,12 +39,10 @@
 		\item $\{b\} \subseteq C$
 		\answer Verdadero
 
-	\end{enumerate}
-	\end{multicols}
+	\end{enumcols}
 
 	\exercise Dados los conjuntos \\ $A=\{1,2,3\}$ ~~~~~~~~ $B=\{ \{2,3\}, 1, 4\}$ ~~~~~~~~ $C=\{ 2,3,4 \}$ ~~~~~~~~ $D=\{ \{1,2,3\} ,4 \}$ \\ hallar los conjuntos: 
-	\begin{multicols}{3}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}[3]
 		\item $A\setminus B$
 		\answer $\{2,3\}$
 
@@ -184,12 +58,11 @@
 		\item $\compl{A}$ considerando el universo $U=\mathbb{N}$
 		\answer $\{ x \in \mathbb{N} ~|~ x \geq 4 \}= \{4,5,6,7,8,9,10,11, \cdots \}$
 
-	\end{enumerate}
-	\end{multicols}
+	\end{enumcols}
 
 	\exercise Determinar la unión e intersección de los siguientes pares de intervalos reales: 
-	\begin{multicols}{3}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}[3]
+
 		\item $A=\left[-2;7\right]$  y $B=\left(0;10\right]$
 		\answer $A \union B = [-2;10]$ y $A \intersec B = (0;7]$
 
@@ -202,13 +75,11 @@
 		\item $A=\left[-5;4\right]$  y $B=\left[9;12\right]$
 		\answer $A \union B = [-5;4] \union [9;12]$ y $A \intersec B = \emptyset$
 
-
-	\end{enumerate}
-	\end{multicols}
+	\end{enumcols}
 
 	\exercise Determinar un conjunto que se corresponda con la parte sombreeada en los siguientes diagramas de Venn:
-	\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}[2]
+
 		\item \img{4cm}{img/conj1.png}
 		\answer $A \intersec (B \union C)$
 
@@ -234,12 +105,11 @@
 		\item \img{4cm}{img/conj8.png}
 		\answer $[A \setminus (B \union C)] \union (A \intersec B \intersec C)$
 
-	\end{enumerate}
-	\end{multicols}
+	\end{enumcols}
 
 	\exercise Mostrar con diagramas de Venn que las siguientes afirmaciones son verdaderas. Luego, demostrarlo con propiedades de conjuntos o leyes lógicas.
-	\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}[2]
+
 		\item $A \intersec (\compl{A} \union B) = A \intersec B$
 		\item $A \setminus (B \setminus C) = (A \intersec C) \union (A \setminus B)$
 		\item $\compl{A \union B \union C} \subseteq \compl{A \union B}$
@@ -249,32 +119,28 @@
 		\item $[C \setminus (A \union B)] \union (A \intersec B \intersec C) = C \setminus (A \symdiff B)$
 		\item $(A \symdiff B) \setminus C = [A \setminus (B \union C)] \union [B \setminus (A \union C)]$
 
-
-	\end{enumerate}
-	\end{multicols}
+	\end{enumcols}
 
 	\exercise Resolver las siguientes situaciones:
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}
 		\item El detalle de las actividades específicas de 25 empresas es el siguiente. Hay: \\ 17 textiles, \\ 11 siderúrgicas, \\ 12 textiles y navieras, \\ 7 siderúrgicas y navieras, \\ 5 textiles y siderúrgicas, \\ 2 tienen intereses en las tres industrias. \\ Determinar cuántos se dedican a la actividad naviera, cuántos a la industria textil solamente y cuántos a un sólo ramo industrial. 
 
 		\item En una encuesta realizada a 100 turistas, que visitan Europa, se obtuvieron los siguientes datos: \\ 15 visitaron Alemania solamente, \\ 49 visitaron Inglaterra, \\ 33 visitaron Alemania, \\ 21 visitaron Alemania pero no Francia, \\ 9 visitaron Alemania e Inglaterra, \\25 visitaron Francia e Inglaterra, \\	55 visitaron Francia. \\ ¿Cuántos turistas visitaron los tres países? ¿Cuántos no estuvieron en ninguno de los tres?
 
 		\item En un cine ingresaron 60 personas a ver una película. 16 de ellas compraron bebida y pochoclos, 23 no compraron nada. Si la cantidad de personas que compro sólo pochoclos fue el doble que la que compró sólo bebidas, ¿cuántas personas compraron sólo bebidas? ¿cuantas personas vieron la pelicula comiendo pochoclos?
 	
-	\end{enumerate}
-
+	\end{enumcols}
 
 	\exercise Mediante el uso de diagramas de Venn, simbolizar los enunciados A y B e indicar si el razonamiento es válido.
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}
 		\item \Reasoning{Todos los cuadrúpedos son vertebrados; Mi mascota es un vertebrado}{Mi mascota es un cuadrúpedo}
 		\item \Reasoning{Todas las personas mendocinas son argentinas; Todas las personas argentinas son sudamericanas}{Todas las personas mendocinas son sudamericanas}
 		\item \Reasoning{Todos los gatos son animales; Todos los gatos están domesticados; Hay un gato}{Algún animal está domesticados}
 
-	\end{enumerate}
+	\end{enumcols}
 
 	\exercise Simplificar las siguientes expresiones:
-	\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}[2]
 		\item $[A \union \compl{A \intersec B}] \intersec \compl{\compl{B}}$
 		\item $[A \intersec \compl{(\compl{A} \union B)}] \union \compl{B}$
 		\item $[A \intersec \compl{(A \union B)}] \union \compl{B}$ 
@@ -285,13 +151,11 @@
 		\item $\compl{A} \union (A \setminus C) \union (A \intersec B)$
 		\item $(A \union B) \intersec (A \union C) \intersec \compl{(B \setminus A)}$
 
-
-	\end{enumerate}
-	\end{multicols}
+	\end{enumcols}
 
 	\exercise Demostrar mediante leyes lógicas o propiedades de conjuntos.
-	\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}[2]
+
 		\item $A \setminus \compl{A} = A$
 		\item $A \subseteq B \Eq \compl{B} \subseteq \compl{A}$
 		\item $A \intersec (B\setminus C) = (A \intersec B) \setminus (A \intersec C)$
@@ -304,12 +168,11 @@
 		\item $(A\setminus B) \times C = (A \times C) \setminus (B \times C)$
 		\item $(A\symdiff B) \times C = (A \times C) \symdiff (B \times C)$
 
-	\end{enumerate}
-	\end{multicols}
+	\end{enumcols}
 
 	\exercise Determinar el conjunto de número reales que satisfacen las condiciones indicadas.
-	\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}[2]
+
 		\item $2(x-1)\left(x-\df{1}{2}\right)<0 ~ \land ~ 3x-1>0$
 		\item $x^3-x=0 ~ \land ~ x^2<\df{1}{4}$
 		\item $|x|<\df{1}{2} ~ \land ~ x^2-x<0$
@@ -317,8 +180,7 @@
 		\item $\cos(x)=0$
 		\item $\sin(x)=-1$
 
-	\end{enumerate}
-	\end{multicols}
+	\end{enumcols}
 
 \end{enumerate}
 
