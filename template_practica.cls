@@ -72,8 +72,13 @@
 \newcommand{\symdiff}{\Delta}
 \newcommand{\compl}[1]{\overline{#1}}
 \newcommand{\df}[2]{\displaystyle\frac{#1}{#2}}
+\newcommand{\f}[2]{\displaystyle\frac{#1}{#2}}
 \newcommand{\img}[2]{\begin{minipage}[t]{\linewidth}\raisebox{-\height}{\includegraphics[width=#1]{#2}}\end{minipage}}
 \newcommand{\power}[1]{\mathcal{P}\left(#1\right)}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
 
 \NewDocumentCommand{\FormatItem}{m}{#1\\[-4pt]}
 

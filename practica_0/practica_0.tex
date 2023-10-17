@@ -1,90 +1,31 @@
-\documentclass[a4paper]{article}
-\usepackage[margin=1.5cm]{geometry}
-
-%\documentclass[11pt]{article}
-%\usepackage[paperwidth=9cm,paperheight=60cm,margin=0.4cm]{geometry}
-
-\usepackage{multicol}
-\usepackage{enumitem}
-\usepackage{graphicx}
-
-%Links
-\usepackage[colorlinks = true,
-            linkcolor = blue,
-            urlcolor  = blue,
-            citecolor = blue,
-            anchorcolor = blue]{hyperref}
-
-%Simbolos matemáticos
-\usepackage{amsmath}
-\usepackage{amssymb}
-
-%Enumeracion
-\usepackage{enumitem}
-
-%Páginas sin numeración
-\pagestyle{empty}
-
-%Interlineado
-\renewcommand{\baselinestretch}{1.5}
-
-%Arreglar comillas
-\usepackage [autostyle]{csquotes}
-\MakeOuterQuote{"}
-
-%Macros
-\newcommand{\Item}{\item[\stepcounter{enumii}$\blacktriangleright$\textbf{(\alph{enumii})}]} %Negrita en algunos items
-\newcommand{\answer}{\item[**]}
-\newcommand{\exercise}{\item}
-
-%Logic macros
-\newcommand{\then}{\to}
-\newcommand{\eq}{\leftrightarrow}
-\newcommand{\xor}{\veebar}
-\newcommand{\nor}{\downarrow}
-\newcommand{\nimply}{\nrightarrow}
-\newcommand{\nand}{\uparrow}
-\newcommand{\Then}{\Rightarrow}
-\newcommand{\Eq}{\Leftrightarrow}
-
+\documentclass{template_practica}
 
 \begin{document}
 
-\noindent \hrulefill 
-\vspace{-7pt}
-\begin{center} 
-	\textbf{ Práctica 0: Propiedades algebraicas} \\
-	Comisión: Rodrigo Cossio-Pérez y Leonardo Lattenero
-\end{center}
-\vspace{-10pt}
-\hrulefill
-
+\practiceheader{Práctica 0: Propiedades algebraicas}{Comisión: Rodrigo Cossio-Pérez y Leonardo Lattenero}
 
 \begin{enumerate}
 
 	\exercise Hallar todos los valores de $x$ que responden a la ecuación
-	%\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}
 		\item $2x-7x-5=0$
 		
 		\item $(3x-1)^2-1=9x^2+12$
 
-		\item $\displaystyle\frac{2-x}{x-1}=3$
+		\item $\f{2-x}{x-1}=3$
 
-		\item $\displaystyle\frac{-2x+1}{x+1}=\displaystyle\frac{4x-7}{-2(x+6)}$
+		\item $\f{-2x+1}{x+1}=\f{4x-7}{-2(x+6)}$
 
-		\item $6(x+9)=2\left(3x+\displaystyle\frac{37}{2}\right)+17$
+		\item $6(x+9)=2\left(3x+\f{37}{2}\right)+17$
 	
-	\end{enumerate}
-	%\end{multicols}
+	\end{enumcols}
 
 	\exercise Decidir si las siguientes expresiones son equivalentes
-	%\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}
 		\item $(2k+5)(k+3)$ ~y~ $2k^2+11k+15$
 		\answer Son equivalentes
 
-		\item $5.2^{x+1}$ ~y~ $\displaystyle\frac{5.2^{x}}{2}$
+		\item $5.2^{x+1}$ ~y~ $\f{5.2^{x}}{2}$
 		\answer No son equivalentes
 		
 		\item $2x^2+4x-6$ ~y~ $(x-1)(x+3)$
@@ -96,34 +37,29 @@
 		\item $4.\left(3^{x}\right)^{2}-3^{2x+1}$ y $3^x$
 		\answer No son equivalentes
 
-	\end{enumerate}
-	%\end{multicols}
+	\end{enumcols}
 
 	\exercise Hallar todos los valores de $x$ que responden a la inecuación
-	%\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}
 		\item $2x+1>0$
 
-		\item $\displaystyle\frac{3x-5}{x-1}<0$
+		\item $\f{3x-5}{x-1}<0$
 
-		\item $\displaystyle\frac{-4x-2}{x+1}>1$
+		\item $\f{-4x-2}{x+1}>1$
 
 		\item $(x-2)(x+1)>0$
 
 		\item $-8(x-2)(2x+7)<0$
 	
-	\end{enumerate}
-	%\end{multicols}
-
+	\end{enumcols}
 
 	\exercise Analizar si las siguientes propiedades son correctas. Justificar
-	\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}[2]
 		\item $x < \sqrt{2} x +1$ para $x>0$
 		\answer Correcto. Como $x>0$ y $\sqrt{2}>1$: $x < \sqrt{2} < \sqrt{2} x +1$
 		
-		\item $\displaystyle\frac{x-1}{2} < x$ para $x>0$
-		\answer Correcto. Como $x>0$: $x > \displaystyle\frac{x}{2} > \displaystyle\frac{x}{2}-\displaystyle\frac{1}{2}$ 
+		\item $\f{x-1}{2} < x$ para $x>0$
+		\answer Correcto. Como $x>0$: $x > \f{x}{2} > \f{x}{2}-\f{1}{2}$ 
 
 		\item Si se tienen $a>b>c$, esto implica que $a+1>c+1$
 		\answer	Correcto. $a>b>c$ implica $a>c$ por transitividad. Si sumamos 1, se tiene $a+1>c+1$
@@ -131,128 +67,118 @@
 		\item $a^2 > a$
 		\answer Incorrecto. Si $a=0.1$ se tiene que $a^2=0.01$. \textit{Nota: La propiedad vale para $a>1$y también para $a<0$.}
 
-		\item $3^{x} < 3^{x+1}$ para $x \in \mathbb{N}$
+		\item $3^{x} < 3^{x+1}$ para $x \in \N$
 		\answer Correcto. Como $1 < 3$, multiplicamos por $3^{x}$ (que es positivo) y obtenemos $3^{x} < 3.3^{x}$. Finalmente, por propiedades de la potenciación, $3^{x} < 3^{x+1}$.
 
 		\item Si $a>b$, entonces $a^x > b^x$
 		\answer Incorrecto. Si $x=0$ se tiene que $a^0=b^0=1$. \textit{Nota, a propiedad es válidad para $x>0$.}
 
-	\end{enumerate}
-	\end{multicols}
+	\end{enumcols}
 
 	\exercise Analizar si las siguientes afirmaciones son correctas. Justificar
-	\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}[2]
 		\item $13$ es un número impar
-		\answer Correcto ya que $13$ puede escribirse como $2k+1$ con $k=6 \in \mathbb{Z}$
+		\answer Correcto ya que $13$ puede escribirse como $2k+1$ con $k=6 \in \Z$
 
 		\item $68$ es un número impar
-		\answer Incorrecto. $68$ es un número par ya que puede escribirse como $2k$ con $k=34 \in \mathbb{Z}$
+		\answer Incorrecto. $68$ es un número par ya que puede escribirse como $2k$ con $k=34 \in \Z$
 
 		\item $-12$ es un número par
-		\answer Correcto ya que $-12$ puede escribirse como $2k$ con $k=-6 \in \mathbb{Z}$
+		\answer Correcto ya que $-12$ puede escribirse como $2k$ con $k=-6 \in \Z$
 
-		\item $0$ es un nùmero par
-		\answer Correcto ya que $0$ puede escribirse como $2k$ con $k=0 \in \mathbb{Z}$
+		\item $0$ es un número par
+		\answer Correcto ya que $0$ puede escribirse como $2k$ con $k=0 \in \Z$
 
 		\item $30$ es múltiplo de 5
-		\answer Correcto ya que $30$ puede escribirse como $5k$ con $k=6 \in \mathbb{Z}$
+		\answer Correcto ya que $30$ puede escribirse como $5k$ con $k=6 \in \Z$
 
 		\item $17$ es múltiplo de 3
-		\answer Incorrecto. $17$ no es múltiplo de 3 ya que no puede escribirse como $3k$ con $k \in \mathbb{Z}$
+		\answer Incorrecto. $17$ no es múltiplo de 3 ya que no puede escribirse como $3k$ con $k \in \Z$
 
 		\item $-12$ es múltiplo de 4
-		\answer Correcto ya que $-12$ puede escribirse como $4k$ con $k=-3 \in \mathbb{Z}$
+		\answer Correcto ya que $-12$ puede escribirse como $4k$ con $k=-3 \in \Z$
 
 		\item $2$ divide a $-12$
-		\answer Correcto ya que $-12$ puede escribirse como $2k$ con $k=-6 \in \mathbb{Z}$
+		\answer Correcto ya que $-12$ puede escribirse como $2k$ con $k=-6 \in \Z$
 
 		\item $-3$ divide a $11$
-		\answer Incorrecto. $11$ no es múltiplo de $-3$ ya que no puede escribirse como $-3k$ con $k \in \mathbb{Z}$
+		\answer Incorrecto. $11$ no es múltiplo de $-3$ ya que no puede escribirse como $-3k$ con $k \in \Z$
 
-	\end{enumerate}
-	\end{multicols}
+	\end{enumcols}
 
-	\exercise Hallar el conjunto de valores del parámetro $k \in \mathbb{R}$ que cumplen la condición
-	%\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\exercise Hallar el conjunto de valores del parámetro $k \in \R$ que cumplen la condición
+	\begin{enumcols}
 
 		\item La parábola $x^2+kx+4$ tiene una única raíz.
 
 		\item La parábola $kx^2+4x+2$ tiene dos raíces reales.
 
-		\item La parábola $\displaystyle\frac{1}{2}x^2-3x+2k$ no tiene raíces reales.
-	\end{enumerate}
-	%\end{multicols}
+		\item La parábola $\f{1}{2}x^2-3x+2k$ no tiene raíces reales.
+	\end{enumcols}
 
-	\exercise Indicar a qué conjunto numérico ($\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$ o $\mathbb{R}$) pertenecen los siguientes números y dar ejemplos que justifiquen
-	\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
-		\item $3x+5$ con $x \in \mathbb{N}$
-		\answer Pertenece a $\mathbb{N}$, por ser la suma de dos números naturales.
+	\exercise Indicar a qué conjunto numérico ($\N$, $\Z$, $\Q$ o $\R$) pertenecen los siguientes números y dar ejemplos que justifiquen
+	\begin{enumcols}[2]
+		\item $3x+5$ con $x \in \N$
+		\answer Pertenece a $\N$, por ser la suma de dos números naturales.
 
-		\item $4x^2$ con $x \in \mathbb{N}$
-		\answer Pertenece a $\mathbb{N}$, por ser el producto de números naturales.
+		\item $4x^2$ con $x \in \N$
+		\answer Pertenece a $\N$, por ser el producto de números naturales.
 
-		\item $\displaystyle\frac{x^2}{3}+1$ con $x \in \mathbb{N}$
-		\answer Pertenece a $\mathbb{Q}$, por ser el cociente de dos números naturales. 
+		\item $\f{x^2}{3}+1$ con $x \in \N$
+		\answer Pertenece a $\Q$, por ser el cociente de dos números naturales. 
 
-		\item $-6x+1$ con $x \in \mathbb{N}$
-		\answer Pertenece a $\mathbb{Z}$, por ser la suma de un número entero negativo y un número natural.
+		\item $-6x+1$ con $x \in \N$
+		\answer Pertenece a $\Z$, por ser la suma de un número entero negativo y un número natural.
 
-		\item $x^2+x+1$ con $x \in \mathbb{Z}$
-		\answer Pertenece a $\mathbb{Z}$, por ser la suma de tres números enteros.
+		\item $x^2+x+1$ con $x \in \Z$
+		\answer Pertenece a $\Z$, por ser la suma de tres números enteros.
 
-		\item $x+\displaystyle\frac{1}{2}$ con $x \in \mathbb{Z}$
-		\answer Pertenece a $\mathbb{Q}$, por ser la suma de un número entero y un número racional.
+		\item $x+\f{1}{2}$ con $x \in \Z$
+		\answer Pertenece a $\Q$, por ser la suma de un número entero y un número racional.
 
-		\item $\displaystyle\frac{1}{x-1}$ con $x \in \mathbb{Z}$ y $x \neq 1$
-		\answer Pertenece a $\mathbb{Q}$, por ser el cociente de un número entero y un número entero distinto de cero.
+		\item $\f{1}{x-1}$ con $x \in \Z$ y $x \neq 1$
+		\answer Pertenece a $\Q$, por ser el cociente de un número entero y un número entero distinto de cero.
 
-		\item $3 \sqrt{x}$ con $x \in \mathbb{N}$
-		\answer Pertenece a $\mathbb{R}$, por ser la raíz cuadrada de un número natural.
+		\item $3 \sqrt{x}$ con $x \in \N$
+		\answer Pertenece a $\R$, por ser la raíz cuadrada de un número natural.
 
-		\item $\displaystyle\frac{x^2}{x-4}$ con $x \in \mathbb{Z}$ y $x \neq 4$
-		\answer Pertenece a $\mathbb{Q}$, por ser el cociente de un número entero y un número entero distinto de cero.
+		\item $\f{x^2}{x-4}$ con $x \in \Z$ y $x \neq 4$
+		\answer Pertenece a $\Q$, por ser el cociente de un número entero y un número entero distinto de cero.
 
-		\item $\displaystyle\frac{\sqrt{3}x-3}{2}$ con $x \in \mathbb{Z}$
-		\answer Pertenece a $\mathbb{R}$, por ser el cociente de un número irracional y un número entero. 
+		\item $\f{\sqrt{3}x-3}{2}$ con $x \in \Z$
+		\answer Pertenece a $\R$, por ser el cociente de un número irracional y un número entero. 
 
-		\item $x+3$ con $x \in \mathbb{Q}$
-		\answer Pertenece a $\mathbb{Q}$, por ser la suma de dos números racionales.
+		\item $x+3$ con $x \in \Q$
+		\answer Pertenece a $\Q$, por ser la suma de dos números racionales.
 
-		\item $\displaystyle\frac{1}{x}$ con $x \in \mathbb{Q}$ y $x \neq 0$
-		\answer Pertenece a $\mathbb{Q}$, por ser el cociente de dos números racionales.
+		\item $\f{1}{x}$ con $x \in \Q$ y $x \neq 0$
+		\answer Pertenece a $\Q$, por ser el cociente de dos números racionales.
 
-		\item $\sqrt{x}$ con $x \in \mathbb{Q}$
-		\answer Pertenece a $\mathbb{R}$, por ser la raíz cuadrada de un número racional.
-	\end{enumerate}
-	\end{multicols}
+		\item $\sqrt{x}$ con $x \in \Q$
+		\answer Pertenece a $\R$, por ser la raíz cuadrada de un número racional.
+	\end{enumcols}
 
 	\exercise Graficar las siguientes funciones, indicando sus elementos notables (ordenada/abscisas al origen, vértice, etc.)
-	%\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}
 		\item $y=-4x+2$
 
-		\item $y=\displaystyle\frac{2}{3}x-1$
+		\item $y=\f{2}{3}x-1$
 		
 		\item $y=x^2+4x+4$
 
 		\item $y=-(x-1)^2+3$
 	
-	\end{enumerate}
-	%\end{multicols}
+	\end{enumcols}
 
 	\exercise Analizar las siguientes situaciones geométricas
-	%\begin{multicols}{2}
-	\begin{enumerate} [label=(\alph*)]
+	\begin{enumcols}
 		\item Averiguar si la recta $y=2x+1$ y la recta $y=2x-5$ son paralelas
 
 		\item Averiguar si la recta $y=2x+1$ y la recta $y=3x+1$ son perpendiculares
 
 		\item Hallar una recta perpendicular a la recta $y=2x+1$ que pase por el punto $(1,2)$
 
-		\item Hallar una recta paralela a la recta $y=\frac{1}{3}x+1$ que pase por el punto $(1,1)$
+		\item Hallar una recta paralela a la recta $y=\f{1}{3}x+1$ que pase por el punto $(1,1)$
 
 		\item Calcular la intersección de las rectas $y=2x+1$ y $y=3x-1$
 
@@ -261,8 +187,7 @@
 		\item Averiguar si a recta $y=-x+3$ se intersecta con la parábola $y=x^2+2x+5$
 	
 		\item Dar una recta perpendicular a la recta $x=2$ que pase por el punto $(1,5)$
-	\end{enumerate}
-	%\end{multicols}
+	\end{enumcols}
 
 \end{enumerate}
 
