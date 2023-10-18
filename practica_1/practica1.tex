@@ -770,35 +770,24 @@
 
 	\end{enumcols}
 
-	\iffalse
-	\exercise A partir del webinar \href{https://youtu.be/kU3_XLfn4jo}{La lógica y los circuitos}, responder:
-	\begin{enumcols} 
-		\Item ¿Qué elementos físicos se han usado para representar los dos estados lógicos (0/1 o F/V)? 
-		\answer Historicamente se ha utilizado la corriente electrica para para tener dichos estados. Cuando los transistores tienen un voltaje \textit{alto} se activa el paso de corriente emulando el estado V, mientras que si tienen un voltaje \textit{bajo} no pasará corriente y estarán en estado F. Sin embargo para establecer los dos estados se puede utilizar cualquier tipo de corriente, Steve Mould utilizó \href{https://youtu.be/IxXaizglscw}{agua} y varias personas han experimentado con dominos, entre ellos, \href{https://youtu.be/SudixyugiX4}{Neil Fraser}, \href{https://youtu.be/OpLU__bhu2w}{Stand-up Maths} y \href{https://youtu.be/lNuPy-r1GuQ}{Numberphile}.  
-
-		\item ¿Cómo se podría armar físicamente una lógica de 3 valores? 
-		\answer Una opción es utilizar tres corrientes: baja, uno mediana y uno alta. La dificultad a partir de allí es armar maquinas físicas que logren representar las compuertas lógicas a partir de dichos voltajes. Análogamente cualquier cosa que represente una corriente (como agua o dominós) podría ser empleada. 
-
-		\item ¿Qué dificultades existen al utilizar lógica en los circuitos? 
-		\answer La dificultad principal para representar los estados lógicos es pasar de procesos físicos analógicos, con posibilidad de tener infinitos valores, a valores digitales con dos estados bien definidos. 
-
-		\Item ¿Qué es el álgebra de Boole y que relación tiene con la lógica?
-		\answer El álgebra de Boole es un sistema matemático para representar variables lógicas. Para constituir el sistema se definen operaciones complemento, suma, producto, etc), valores que pueden tomar las variables (0,1) y otras notaciones y reglas que permiten modelar circuitos lógicos.
-		
-		\Item ¿Cómo se representan los operadores lógicos típicos en el álgebra de Boole? 
-		\answer Negación $\neg p$ se escribe $\bar{p}$, conjunción $p\land q$ es producto $p.q$ y disyunción $p \lor q$ es suma $p+q$. Estas operaciones se definen para ser utilizadas con los valores $0$ y $1$ a partir de reglas internas, por ejemplo los casos que definen a la siyunción son $0+0=0$, $1+0=1$, $0+1=1$, $1+1=1$, que son análogos a la tabla de verdad.
-
-		\item ¿Cómo se conoce a las formas normales disyuntiva (DNF) y conjuntiva (CNF) en el álgebra de Boole? 
-		\answer A la DNF se le suele llamar \textit{suma de productos} y a la CNF \textit{producto de sumas}.
-
-		\item A partir de las tablas de verdad mostradas en el webinar, indicar cuál es la expresión lógica que representa la salida de los circuitos lógicos: \\ - salida del Multiplexor,\\ - Sum y Carry en Half Adder,\\ - Sum y CarryOut en Full Adder,\\ - Difference y Borrow en Half Subtractor,\\ - salidas del Decodificador,\\ - salidas del Demultiplexor. 
-
-		\item Encontrar algún error en el webinar o tema sobre el cuál se debe aclarar algo 
-
-		\item Buscar algún aspecto de la relación entre matemática discreta y teoría de circuitos que no haya sido tratado en el webinar
-
-	\end{enumcols}
-	\fi
+%	\exercise A partir del webinar \href{https://youtu.be/kU3_XLfn4jo}{La lógica y los circuitos}, responder:
+%	\begin{enumcols} 
+%		\Item ¿Qué elementos físicos se han usado para representar los dos estados lógicos (0/1 o F/V)? 
+%		\answer Historicamente se ha utilizado la corriente electrica para para tener dichos estados. Cuando los transistores tienen un voltaje \textit{alto} se activa el paso de corriente emulando el estado V, mientras que si tienen un voltaje \textit{bajo} no pasará corriente y estarán en estado F. Sin embargo para establecer los dos estados se puede utilizar cualquier tipo de corriente, Steve Mould utilizó \href{https://youtu.be/IxXaizglscw}{agua} y varias personas han experimentado con dominos, entre ellos, \href{https://youtu.be/SudixyugiX4}{Neil Fraser}, \href{https://youtu.be/OpLU__bhu2w}{Stand-up Maths} y \href{https://youtu.be/lNuPy-r1GuQ}{Numberphile}.  
+%		\item ¿Cómo se podría armar físicamente una lógica de 3 valores? 
+%		\answer Una opción es utilizar tres corrientes: baja, uno mediana y uno alta. La dificultad a partir de allí es armar maquinas físicas que logren representar las compuertas lógicas a partir de dichos voltajes. Análogamente cualquier cosa que represente una corriente (como agua o dominós) podría ser empleada. 
+%		\item ¿Qué dificultades existen al utilizar lógica en los circuitos? 
+%		\answer La dificultad principal para representar los estados lógicos es pasar de procesos físicos analógicos, con posibilidad de tener infinitos valores, a valores digitales con dos estados bien definidos. 
+%		\Item ¿Qué es el álgebra de Boole y que relación tiene con la lógica?
+%		\answer El álgebra de Boole es un sistema matemático para representar variables lógicas. Para constituir el sistema se definen operaciones complemento, suma, producto, etc), valores que pueden tomar las variables (0,1) y otras notaciones y reglas que permiten modelar circuitos lógicos.
+%		\Item ¿Cómo se representan los operadores lógicos típicos en el álgebra de Boole? 
+%		\answer Negación $\neg p$ se escribe $\bar{p}$, conjunción $p\land q$ es producto $p.q$ y disyunción $p \lor q$ es suma $p+q$. Estas operaciones se definen para ser utilizadas con los valores $0$ y $1$ a partir de reglas internas, por ejemplo los casos que definen a la siyunción son $0+0=0$, $1+0=1$, $0+1=1$, $1+1=1$, que son análogos a la tabla de verdad.
+%		\item ¿Cómo se conoce a las formas normales disyuntiva (DNF) y conjuntiva (CNF) en el álgebra de Boole? 
+%		\answer A la DNF se le suele llamar \textit{suma de productos} y a la CNF \textit{producto de sumas}.
+%		\item A partir de las tablas de verdad mostradas en el webinar, indicar cuál es la expresión lógica que representa la salida de los circuitos lógicos: \\ - salida del Multiplexor,\\ - Sum y Carry en Half Adder,\\ - Sum y CarryOut en Full Adder,\\ - Difference y Borrow en Half Subtractor,\\ - salidas del Decodificador,\\ - salidas del Demultiplexor. 
+%		\item Encontrar algún error en el webinar o tema sobre el cuál se debe aclarar algo 
+%		\item Buscar algún aspecto de la relación entre matemática discreta y teoría de circuitos que no haya sido tratado en el webinar
+%	\end{enumcols}
 	
 
 \end{enumerate}
