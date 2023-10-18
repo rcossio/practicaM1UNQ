@@ -53,12 +53,12 @@
         #2
     \end{center}
     \vspace{-10pt}
-    \hrulefill
+    \hrulefill \\
 }
 
-\newcommand{\Item}{\item[\stepcounter{enumii}$\blacktriangleright$\textbf{(\alph{enumii})}]} 
-\newcommand{\answer}{\item[**]}
-\newcommand{\exercise}{\item}
+\newcommand{\Item}{\item[\stepcounter{enumii}$\blacktriangleright$\textbf{(\alph{enumii})}]} % Item with triangle
+\newcommand{\answer}{\item[$\blacktriangleright$]} % Answer
+\newcommand{\exercise}{\item} % Exercise
 \newcommand{\then}{\to}
 \newcommand{\eq}{\leftrightarrow}
 \newcommand{\xor}{\veebar}
@@ -85,7 +85,7 @@
 \NewDocumentCommand{\Reasoning}{>{\SplitList{;}}m m}{
   \begin{minipage}[t]{\linewidth}
     \ProcessList{#1}{\FormatItem} 
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{5.2cm}{.5pt}\\[-8pt]
+    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{2.7cm}{.5pt}\\[-8pt]
     #2 \\[-8pt]
   \end{minipage}%
 }
@@ -93,9 +93,9 @@
 \NewDocumentCommand{\DReasoning}{>{\SplitList{;}}m >{\SplitList{;}}m m}{
   \begin{minipage}[t]{\linewidth}
     \ProcessList{#1}{\FormatItem} 
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{3cm}{.5pt}\\[-8pt]
+    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{2.7cm}{.5pt}\\[-8pt]
     \ProcessList{#2}{\FormatItem}
-    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{3cm}{.5pt}\\[-8pt]
+    \\[-24pt] \hspace{-.5cm}\rule[.5pt]{2.7cm}{.5pt}\\[-8pt]
     #3 \\[-8pt]
   \end{minipage}%
 }

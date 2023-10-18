@@ -9,8 +9,8 @@ def process_docente(input_lines, input_filename):
     with open(output_filename, 'w') as file:
         for line in input_lines:
             line = re.sub(r'\\begin\{enumcols\}\[\d+\]', r'\\begin{enumcols}', line)
-            if '\\answer' in line:
-                line = line.replace('\\answer', '\\textcolor{darkblue}{ \\answer ') + "}"
+            #if '\\answer' in line:   #TO FIX: This generates an enumeration bug
+            #    line = line.replace('\\answer', '\\textcolor{darkblue}{ \\answer ') + "}"
             file.write(line)
 
     compile_tex(output_filename)
