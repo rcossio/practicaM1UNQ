@@ -8,14 +8,16 @@
 
 	\exercise Demostrar que las siguientes relaciones son de equivalencia, indicar sus clases de equivalencia y el conjunto cociente.
 	\begin{enumcols}
-		\item La relación $ R = \left\lbrace (x,y) \in \Z^{2} ~|~ \exists k \in \Z: ~x-y=2k \right\rbrace$ donde $x \sim y$ se lee como "$x$ tiene la misma paridad que $y$".
+		\item La relación $ R = \left\{(x,y) \in \Z^{2} ~|~ \exists k \in \Z: ~x-y=2k \right\right\}$ donde $x \sim y$ se lee como "$x$ tiene la misma paridad que $y$".
+		\answer Reflexividad: $\forall x \in \Z : \exists k \in \Z: ~x-x=2k$ es verdad con $k=0\in\Z$. \\ Simetría: $\forall x,y \in \Z: (\exists k \in \Z: ~x-y=2k) \then (\exists m \in \Z: ~y-x=2m)$ es verdad definiendo $m=-k\in\Z$. \\ Transitividad: $\forall x,y,z \in \Z: (\exists k: ~x-y=2k) \land (\exists m: ~y-z=2m)  \then (\exists n: ~x-z=2n)$ es verdad definiendo $n=k+m\in\Z$. \\ Como la relación es reflexiva, simétrica y transitiva, es una relación de equivalencia. \\ Las clases de equivalencia son los números impares $K_1=\{\cdots,1,3,5,7,9,\cdots\}$ y los números pares $K_2=\{\cdots,0,2,4,6,8,\cdots\}$.\\ El conjunto cociente es $\f{\Z}{R}=\{K_1,K_2\}$.
+
+		\item La relación $ R = \left\{ (x,y)\in \Z^{2} ~|~ x^{2}=y^{2} \right\}$ donde $x \sim y$ se lee como "$x$ tiene el mismo cuadrado que $y$".
+		\answer Reflexividad: $\forall x\in\Z: x^{2}=x^{2}$, que es verdadero. \\ Simetría: $\forall x,y\in\Z: x^{2}=y^{2} \then  y^{2}=x^{2}$, que es verdadero por la conmutatividad de la igualdad. \\ Transitividad: $\forall x,y,z\in\Z: (x^{2}=y^{2}) \land (y^{2}=z^{2}) \then x^{2}=z^{2}$, que es verdadero por la transitividad de la igualdad. \\ Por lo tanto, es una relación de equivalencia. \\ Las clases de equivalencia son $K_0=\{0\}$ y $K_n=\{n,-n\}$ donde $n\in\N$. \\ El conjunto cociente es $\f{\Z}{R}=\bigcup_{i\in\N_0} K_i$.
 		
-		\item La relación $ R = \left\lbrace (x,y)\in \Z^{2} ~|~ x^{2}=y^{2} \right\rbrace$ donde $x \sim y$ se lee como "$x$ tiene el mismo cuadrado que $y$".
+		\item Considerando un rectángulo $L_{1}$ de lados $a$ y $b$ y otro rectángulo $L_2$ de lados $c$ y $d$, donde $a,b,c,d \in ( 0 , +\infty)$. Se define la relación $ R = \left\{ (L_1,L_2) ~|~ a.b=c.d ~\right\}$ donde $L_{1}\sim L_{2}$ se lee como "$L_{1}$ tiene la misma área que $L_{2}$".
 		
-		\item Considerando un rectángulo $L_{1}$ de lados $a$ y $b$ y otro rectángulo $L_2$ de lados $c$ y $d$, donde $a,b,c,d \in ( 0 , +\infty)$. Se define la relación $ R = \left\lbrace (L_1,L_2) ~|~ a.b=c.d ~\right\rbrace$ donde $L_{1}\sim L_{2}$ se lee como "$L_{1}$ tiene la misma área que $L_{2}$".
-		
-		\item Considerando la fracción $q_1$ representada por $\displaystyle\frac{a}{b}$ y otra fracción $q_2$ representada por $\displaystyle\frac{c}{d}$, con $a,c\in\Z$ y $b,d\in\Z\setminus\{0\} $. Se define la relación: $R = \left\lbrace (q_1,q_2) ~|~ a.d=c.b \right\rbrace$ donde $q_{1}\sim q_{2}$ se lee como "$q_{1}$ es una fracción equivalente a $q_{2}$".
-		\answer Reflexividad: $\forall a,b:  \left(\frac{a}{b}\right) R \left(\frac{a}{b}\right)$ ya que $a.b=a.b$. \\ Simetría: $\forall a,b,c,d: \left(\frac{a}{b}\right) R \left(\frac{c}{d}\right) \to \left(\frac{c}{d}\right) R \left(\frac{a}{b}\right)$ ya que $a.d=c.b \to c.b=a.d$. \\ Transitividad: $\forall a,b,c,d,e,f:  \left(\frac{a}{b}\right) R \left(\frac{c}{d}\right) \land \left(\frac{c}{d}\right) R \left(\frac{e}{f}\right) \to \left(\frac{a}{b}\right) R \left(\frac{e}{f}\right)$ \\ ya que $(a.d=c.b) \land (c.f=e.d) ~~\Then~~ (a.d=c.b) \land (c=\frac{e.d}{f}) ~~\Then~~ a.d=\frac{e.d}{f}.b ~~\Then~~ a=\frac{e}{f}.b ~~\Then~~ af=eb$
+		\item Considerando la fracción $q_1$ representada por $\f{a}{b}$ y otra fracción $q_2$ representada por $\f{c}{d}$, con $a,c\in\Z$ y $b,d\in\Z\setminus\{0\} $. Se define la relación: $R = \left\{(q_1,q_2) ~|~ a.d=c.b \right\}$ donde $q_{1}\sim q_{2}$ se lee como "$q_{1}$ es una fracción equivalente a $q_{2}$".
+		\answer Reflexividad: $\forall a,b:  \left(\frac{a}{b}\right) R \left(\frac{a}{b}\right)$ ya que $a.b=a.b$. \\ Simetría: $\forall a,b,c,d: \left(\frac{a}{b}\right) R \left(\frac{c}{d}\right) \to \left(\frac{c}{d}\right) R \left(\frac{a}{b}\right)$ ya que $a.d=c.b \to c.b=a.d$. \\ Transitividad: $\forall a,b,c,d,e,f:  \left(\frac{a}{b}\right) R \left(\frac{c}{d}\right) \land \left(\frac{c}{d}\right) R \left(\frac{e}{f}\right) \to \left(\frac{a}{b}\right) R \left(\frac{e}{f}\right)$ \\ ya que $(a.d=c.b) \land (c.f=e.d) ~~\Then~~ (a.d=c.b) \land (c=\frac{e.d}{f}) ~~\Then~~ a.d=\frac{e.d}{f}.b ~~\Then~~ a=\frac{e}{f}.b ~~\Then~~ af=eb$.\\ Por lo tanto la relación es de equivalencia. \\ Sus clases son las de fracciones equivalentes, por ejemplo, $K_{\frac{1}{2}}=\left\{\f{1}{2},\f{2}{4},\f{-1}{-2},\f{15}{30},\cdots \right\}$.
 
 	\end{enumcols}
 
@@ -39,6 +41,7 @@
 	\exercise Considerando el siguiente árbol genealógico: \\ \begin{center} \includegraphics[height=5cm]{img/familia.png} \end{center}
 	\begin{enumcols} 
 		\item Verificar que la relación "$x$ tiene el mismo color de pelo que $y$" es una relación de equivalencia y representarla con un grafo. Indicar las clases de equivalencia y el conjunto cociente.
+		\answer La relación es reflexiva, simétrica y transitiva. Las clases de equivalencia son $K_{\text{Juan}}=\{$Juan, María$\}$ (pelo gris), $K_{\text{Mirta}}=\{$Mirta, José, Lucía, Pedro, Luna, Jorje, Elena$\}$ (pelo negro), $K_{\text{Iván}}=\{$Iván, Gina$\}$ (pelo colorado) y $K_{\text{Ollie}}=\{$Ollie$\}$ (pelo blanco). El conjunto cociente es $\{K_{\text{Juan}}, K_{\text{Mirta}}, K_{\text{Iván}}, K_{\text{Ollie}}\}$
 
 		\item Verificar que la relación "$x$ nació en el mismo país que $y$" es una relación de equivalencia y representarla con un grafo. Indicar las clases de equivalencia y el conjunto cociente.
 		
@@ -87,12 +90,16 @@
 
 	\end{enumcols}
 
-	\exercise Dados los siguientes conjuntos (y sus superconjuntos asociados),  obtener el conjunto de cotas superiores e inferiores, su supremo y su ínfimo.
+	\exercise Dados los siguientes conjuntos (y sus superconjuntos asociados), obtener su máximo y mínimo, el conjunto de cotas superiores e inferiores, su supremo y su ínfimo.
 	\begin{enumcols}
 		\item $(0,1]$ con la relación $\leq$ definida en $\R$.
-		\item $[-6,5]$ con la relación $\leq$ definida en $\R$.
-		\item $(-6,5)$ con la relación $\leq$ definida en $\R$.
+		\answer Cotas superiores: $[1,+\infty)$. Cotas inferiores: $(-\infty,0]$. Supremo: $1$. Ínfimo: $0$. Máximo: $1$. Mínimo: $0$.  
+		\item $[-8,5]$ con la relación $\leq$ definida en $\R$.
+		\answer Cotas superiores: $[5,+\infty)$. Cotas inferiores: $(-\infty,-8]$. Supremo: $5$. Ínfimo: $-8$. Máximo: $5$. Mínimo: $-6$.
+		\item $(-8,5)$ con la relación $\leq$ definida en $\R$.
+		\answer Cotas superiores: $[5,+\infty)$. Cotas inferiores: $(-\infty,-8]$. Supremo: $5$. Ínfimo: $-8$. No existe máximo ni mínimo.
 		\item $\mathcal{P}(\{1,2,3\})$ con la relación $\subseteq$ definida en $\mathcal{P}(\{1,2,3,4\})$.
+		\answer Cotas superiores: $\{\{1,2,3\}, \{1,2,3,4\}\}$. Supremo: $\{1,2,3\}$. La única cota inferior es $\emptyset$, por lo tanto también es el ínfimo. Máximo: $\{1,2,3\}$. Mínimo: $\emptyset$.
 	\end{enumcols}
 
 	\exercise Analizar en cada caso si la relación dada en el conjunto $A$ es de equivalencia. En caso de serlo, describir su conjunto cociente.
