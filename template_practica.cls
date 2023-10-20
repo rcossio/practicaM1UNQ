@@ -79,6 +79,10 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\SEL}[1]{\left\{\begin{matrix} #1 \end{matrix}\right.} % System of equations
+\newcommand{\Cod}{\text{Cod}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
 
 \NewDocumentCommand{\FormatItem}{m}{#1\\[-4pt]}
 
