@@ -164,33 +164,59 @@
 	\exercise Considerando la gráfica de $f: \R^{+}_0 \to \R ~|~ f(x)=\sqrt{x}$, graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible e imagen.
 	\begin{enumcols}[2]
 		\item $\sqrt{-2x}$
+		\answer La función es $g(x)=f(-2x)$. $D_g=\left(-\infty,0\right]$. $I_g=\left[0,+\infty\right)$ \\ \img{5cm}{img/raiz1.png}
 		\item $2\sqrt{x+1}$
+		\answer La función es $g(x)=2f(x+1)$. $D_f=\left[-1,+\infty\right)$. $I_f=\left[0,+\infty\right)$ \\ \img{5cm}{img/raiz2.png}
 		\item $\sqrt{4x}+5$
+		\answer La función es $g(x)=f(4x)+5$. $D_f=\left[0,+\infty\right)$. $I_f=\left[5,+\infty\right)$ \\ \img{5cm}{img/raiz3.png}
 		\item $-\sqrt{x}+3$
+		\answer La función es $g(x)=-f(x)+3$. $D_f=\left[0,+\infty\right)$. $I_f=\left(-\infty,3\right]$ \\ \img{5cm}{img/raiz4.png}
 	\end{enumcols}
 	
-	\exercise Considerando la gráfica de $f: \R^{+}_0 \to \R ~|~ f(x)=\f{1}{x}$, graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible e imagen.
+	\exercise Considerando la gráfica de $f: \R\setminus\{0\} \to \R ~|~ f(x)=\f{1}{x}$, graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible e imagen.
 	\begin{enumcols}[3]
 		\item $\f{2}{x}$
-		\item $\f{x+1}{x+1}$
+		\answer La función es $g(x)=2f(x)$. $D_g=\R\setminus\{0\}$. $I_g=\R\setminus\{0\}$. \\ \img{5cm}{img/homografica1.png}.  
+		\item $\f{1}{3x}-2$
+		\answer La función es $g(x)=f(3x)-2$. $D_g=\R\setminus\{0\}$. $I_g=\R\setminus\{-2\}$.  \\ \img{5cm}{img/homografica2.png}.
+		\item $\f{x+1}{x+2}$
+		\answer Reformulamos algebraicamente: $\f{x+1}{x+2}=\f{x+2-1}{x+2}=\f{x+2}{x+2}-\f{1}{x+2}=-\f{1}{x+2}+1$. \\ La función es $g(x)=-f(x+2)+1$. $D_g=\R\setminus\{-2\}$. $I_g=\R\setminus\{1\}$. \\ \img{5cm}{img/homografica3.png}.  
 		\item $\f{2x+3}{4x-1}$
+		\answer Reformulamos algebraicamente: $\f{2x+3}{4x-1}=\f{1}{2} \left(\f{4x+6}{4x-1}\right)= \f{1}{2} \left(\f{4x-1}{4x-1}+\f{7}{4x-1}\right) = \f{1}{2} + \f{7}{2(4x-1)} = \f{7}{8\left(x-\frac{1}{4}\right)} + \f{1}{2}$. \\ La función es $g(x)=7.f\left(8\left(x-\frac{1}{4}\right)\right)+ \f{1}{2}$. $D_g=\R\setminus\left\{\f{1}{4}\right\}$. $I_g=\R\setminus\left\{\f{1}{2}\right\}$. \\ \img{5cm}{img/homografica4.png}.  
 	\end{enumcols}
 
-	\exercise Considerando la gráfica de las funciones trigonométricas básicas, graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible e imagen.
+	\exercise Considerando la gráfica de las funciones trigonométricas básicas, graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible, imagen y período.
 	\begin{enumcols}[3]
 		\item $\sin(2x)$
+		\answer Considerando $f(x)=\sin(x)$, la función es $g(x)=f(2x)$. $D_g=\R$. $I_g=[-1,1]$. $P=\pi$. \\ \img{7cm}{img/sin1.png}
 		\item $3\sin(x)$
+		\answer Considerando $f(x)=\sin(x)$, la función es $g(x)=3f(x)$. $D_g=\R$. $I_g=[-3,3]$. $P=2\pi$. \\ \img{7cm}{img/sin2.png}
 		\item $-2\sin(x)$
-		\item $\sin(x-\pi)$
+		\answer Considerando $f(x)=\sin(x)$, la función es $g(x)=-2f(x)$. $D_g=\R$. $I_g=[-2,2]$. $P=2\pi$. \\ \img{7cm}{img/sin3.png}
+		\item $\sin(x-\pi)$ 
+		\answer Considerando $f(x)=\sin(x)$, la función es $g(x)=f(x-\pi)$. $D_g=\R$. $I_g=[-1,1]$. $P=2\pi$. \\ \img{7cm}{img/sin4.png}
 		\item $\sin(\pi x)+5$
+		\answer Considerando $f(x)=\sin(x)$, la función es $g(x)=f(\pi x)+5$. $D_g=\R$. $I_g=[4,6]$. $P=2$. \\ \img{7cm}{img/sin5.png}
 		\item $\sin(-x)$
+		\answer Considerando $f(x)=\sin(x)$, la función es $g(x)=f(-x)$. $D_g=\R$. $I_g=[-1,1]$. $P=2\pi$. \\ \img{7cm}{img/sin6.png}
 		\item $-2\sin\left(x-\f{\pi}{2}\right)+4$
+		\answer Considerando $f(x)=\sin(x)$, la función es $g(x)=-2f\left(x-\f{\pi}{2}\right)+4$. $D_g=\R$. $I_g=[2,6]$. $P=2\pi$. \\ \img{7cm}{img/sin7.png}
 		\item $2\cos(3x)$
+		\answer Considerando $f(x)=\cos(x)$, la función es $g(x)=2f(3x)$. $D_g=\R$. $I_g=[-2,2]$. $P=\f{2\pi}{3}$. \\ \img{7cm}{img/cos1.png}
 		\item $-\cos\left(x-\f{\pi}{2}\right)$
+		\answer Considerando $f(x)=\cos(x)$, la función es $g(x)=-f\left(x-\f{\pi}{2}\right)$. $D_g=\R$. $I_g=[-1,1]$. $P=2\pi$. \\ \img{7cm}{img/cos2.png}
 		\item $\cos(2x+100\pi)$
-		\item $\arcsin(x)$
-		\item $\arccos(x)$
-		\item $\arctan(x)$
+		\answer Considerando $f(x)=\cos(x)$, la función es $g(x)=f(2(x+50\pi))$. $D_g=\R$. $I_g=[-1,1]$. $P=\pi$. \\ \img{7cm}{img/cos3.png}
+		\item $\tan(2x)-1$
+		\answer Considerando $f(x)=\tan(x)$, la función es $g(x)=f(2x)-1$. $D_g=\R\setminus\{x\in\R ~|~ x=\f{k\pi}{2} con k\in\Z\}$. $I_g=\R$. $P=\f{\pi}{2}$. \\ \img{7cm}{img/tan1.png}
+
+	\end{enumcols}
+	
+	\exercise Redefinir las funciones trigonométricas indicadas para que sean biyectivas, obtener su inversa. Obtener el dominio e imagen de la función inversa y graficarla.
+	\begin{enumcols}[3]
+		\item $\sin^{-1}(x)=\arcsin(x)$. Al redefinir el dominio de $\sin(x)$ priorizar los números cercanos a cero.
+		\item $\cos^{-1}(x)=\arccos(x)$. Al redefinir el dominio de $\cos(x)$ priorizar los números positivos.
+		\item $\tan^{-1}(x)=\arctan(x)$. Al redefinir el dominio de $\tan(x)$ priorizar los números cercanos a cero.
 	\end{enumcols}
 
 	\exercise Resolver las siguientes ecuaciones hallando todas las soluciones posibles.
