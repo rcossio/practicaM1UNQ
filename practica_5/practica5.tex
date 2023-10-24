@@ -46,7 +46,7 @@
 		\answer No cumple la condición de existencia. Hay autos a los que nunca se les ha hecho mantenimiento.
 
 		\item Cursos de la UNQ con el aula en que se dictan.
-		\answer No cumple la condición de unicidad. Hay cursos que son dictados en más de un aula.
+		\answer No cumple la condición de unicidad ni la de existencia. Hay cursos que son dictados en más de un aula y hay cursos virtuales sin aula.
 
 		\item Palomas con la cantidad de plumas que tienen.
 		\answer No cumple la condición de unicidad. En distintos días una paloma puede perder o ganar plumas. Notar que si se considera la cantidad de plumas que tiene una paloma en un momento dado, sí es función.
@@ -109,24 +109,40 @@
 		\answer $D_f=\R$. La función $f(x)$ es biyectiva (inyectiva y sobreyectiva). \\ La inversa es $f^{-1}:\R \to \R ~|~ f^{-1}(x)=\f{-x+7}{3}$. 
 
 		\item $f(x)=x^2+4x-3$
-		\answer $D_f=\R$. La función no es sobreyectiva ya que $I_f=[-7,+\infty]\neq \Cod_f$. Tampoco es inyectiva ya que existen dos valores de $x$ para los que $f(x)=0$.
+		\answer $D_f=\R$. La función no es sobreyectiva ya que $I_f=[-7,+\infty)\neq \Cod_f$. Tampoco es inyectiva ya que existen dos valores de $x$ para los que $f(x)=0$.
 
 		\item $f(x)=x^2-4x+4$
+		\answer $D_f=\R$. La función no es sobreyectiva ya que $I_f=[0,+\infty)\neq \Cod_f$. Tampoco es inyectiva ya que existen dos valores de $x$ para los que $f(x)=1$.
+
 		\item $f(x)=x^2-5$
+		\answer $D_f=\R$. La función no es sobreyectiva ya que $I_f=[-5,+\infty)\neq \Cod_f$. Tampoco es inyectiva ya que existen dos valores de $x$ para los que $f(x)=0$.
+
 		\item $f(x)=-x^2+1$
+		\answer $D_f=\R$. La función no es sobreyectiva ya que $I_f=(-\infty,1)\neq \Cod_f$. Tampoco es inyectiva ya que existen dos valores de $x$ para los que $f(x)=0$.
+
 		\item $f(x)=3(x+1)(x-1)$
+		\answer $D_f=\R$. La función no es sobreyectiva ya que $I_f=[-3,+\infty)\neq \Cod_f$. Tampoco es inyectiva ya que existen dos valores de $x$ para los que $f(x)=0$.
+
 		\item $f(x)=(x-1)^2-16$
+		\answer $D_f=\R$. La función no es sobreyectiva ya que $I_f=[-16,+\infty)\neq \Cod_f$. Tampoco es inyectiva ya que existen dos valores de $x$ para los que $f(x)=0$.
+
 		\item $f(x)=4(x+1)^2-4$
+		\answer $D_f=\R$. La función no es sobreyectiva ya que $I_f=[-4,+\infty)\neq \Cod_f$. Tampoco es inyectiva ya que existen dos valores de $x$ para los que $f(x)=0$.
 
 	\end{enumcols}
 
 	\exercise Graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible e imagen.
 	\begin{enumcols}[3]
 		\item $f(x)=\SEL{2x-1 & si ~x\leq 1\\ x^2 & si ~x>1 }$
+		\answer $D_f=\R$. $I_f=\R$. \\ \img{6cm}{img/piece1.png}
 		\item $f(x)=\SEL{-x & si ~~x\leq 0\\ x  & si ~0<x\leq 3 \\ -x & si ~x>3}$
+		\answer $D_f=\R$. $I_f=(-\infty,3)\union [0,+\infty)$. \\ \img{6cm}{img/piece2.png}
 		\item $f(x)=\SEL{3x-2 & si ~~x\leq 2 \\ x^2 & si ~~2<x\leq 3 \\ \f{x+6}{9} & si ~x>3}$
+		\answer $D_f=\R$. $I_f=\R$. \\ \img{6cm}{img/piece3.png}
 		\item $f(x)=\SEL{x^2+7 & si ~~x\leq 2\\ x+4 & si ~~x>2}$
+		\answer $D_f=\R$. $I_f=(6,+\infty)$. \\ \img{6cm}{img/piece4.png}
 		\item $f(x)=|x|$
+		\answer $D_f=\R$. $I_f=[0,+\infty)$. \\ \img{6cm}{img/piece5.png}
 	\end{enumcols}
 
 	\exercise Indicar a qué función corresponde este gráfico. Observando el gráfico, indicar si la función es inyectiva, y si es sobreyectiva.
