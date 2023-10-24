@@ -208,15 +208,18 @@
 		\item $\cos(2x+100\pi)$
 		\answer Considerando $f(x)=\cos(x)$, la función es $g(x)=f(2(x+50\pi))$. $D_g=\R$. $I_g=[-1,1]$. $P=\pi$. \\ \img{7cm}{img/cos3.png}
 		\item $\tan(2x)-1$
-		\answer Considerando $f(x)=\tan(x)$, la función es $g(x)=f(2x)-1$. $D_g=\R\setminus\{x\in\R ~|~ x=\f{k\pi}{2} con k\in\Z\}$. $I_g=\R$. $P=\f{\pi}{2}$. \\ \img{7cm}{img/tan1.png}
+		\answer Considerando $f(x)=\tan(x)$, la función es $g(x)=f(2x)-1$. $D_g=\R\setminus\{x\in\R ~|~ x=\f{k\pi}{2} con k\in\Z\}$. $I_g=\R$. $P=\f{\pi}{2}$. \\ \img{6cm}{img/tan1.png}
 
 	\end{enumcols}
 	
-	\exercise Redefinir las funciones trigonométricas indicadas para que sean biyectivas, obtener su inversa. Obtener el dominio e imagen de la función inversa y graficarla.
+	\exercise Con base en los criterios dados, redefine las funciones trigonométricas para que sean biyectivas. Luego, determina y grafica la función inversa especificada, estableciendo su dominio e imagen.
 	\begin{enumcols}[3]
-		\item $\sin^{-1}(x)=\arcsin(x)$. Al redefinir el dominio de $\sin(x)$ priorizar los números cercanos a cero.
-		\item $\cos^{-1}(x)=\arccos(x)$. Al redefinir el dominio de $\cos(x)$ priorizar los números positivos.
-		\item $\tan^{-1}(x)=\arctan(x)$. Al redefinir el dominio de $\tan(x)$ priorizar los números cercanos a cero.
+		\item Redefinir el dominio de $\sin(x)$ priorizando los números cercanos a cero para obtener su inversa, $\arcsin(x)$. 
+		\answer Se define $f:\left[-\f{\pi}{2},\f{\pi}{2}\right] \to [-1,1] ~|~ f(x)=\sin(x)$, que es biyectiva, para que tenga inversa \\ $f^{-1}: [-1,1] \to \left[-\f{\pi}{2},\f{\pi}{2}\right] ~|~ f^{-1}(x)=\arcsin(x)$. \\ \img{5cm}{img/arcsin.png}
+		\item Redefinir el dominio de $\cos(x)$ priorizando los números positivos para obtener su inversa, $\arccos(x)$.
+		\answer Se define $f:[0,\pi] \to [-1,1] ~|~ f(x)=\cos(x)$, que es biyectiva, para que tenga inversa \\ $f^{-1}: [-1,1] \to [0,\pi] ~|~ f^{-1}(x)=\arccos(x)$. \\ \img{5cm}{img/arccos.png}
+		\item Redefinir el dominio de $\tan(x)$ priorizando los números cercanos a cero para obtener su inversa, $\arctan(x)$. 
+		\answer Se define $f:\left(-\f{\pi}{2},\f{\pi}{2}\right) \to \R ~|~ f(x)=\sin(x)$, que es biyectiva, para que tenga inversa \\ $f^{-1}: \R \to \left(-\f{\pi}{2},\f{\pi}{2}\right) ~|~ f^{-1}(x)=\arctan(x)$. \\ \img{7cm}{img/arctan.png}
 	\end{enumcols}
 
 	\exercise Resolver las siguientes ecuaciones hallando todas las soluciones posibles.
@@ -232,18 +235,31 @@
 	\exercise Considerando las gráficas de las funciones exponencial y logaritmo, graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible e imagen.
 	\begin{enumcols}[3]
 		\item $2\ln(x)$
+		\answer Considerando $f(x)=\ln(x)$, la función es $g(x)=2f(x)$. $D_g=\R^{+}$. $I_g=\R$. \\ \img{5cm}{img/log1.png}
 		\item $\ln(x)+1$
+		\answer Considerando $f(x)=\ln(x)$, la función es $g(x)=f(x)+1$. $D_g=\R^{+}$. $I_g=\R$. \\ \img{5cm}{img/log2.png}
 		\item $\ln(x-4)$
+		\answer Considerando $f(x)=\ln(x)$, la función es $g(x)=f(x-4)$. $D_g=(4,+\infty)$. $I_g=\R$. \\ \img{5cm}{img/log3.png}
 		\item $-\ln(x)$
+		\answer Considerando $f(x)=\ln(x)$, la función es $g(x)=-f(x)$. $D_g=\R^{+}$. $I_g=\R$. \\ \img{5cm}{img/log4.png}
 		\item $-3\ln(x+1)-2$
+		\answer Considerando $f(x)=\ln(x)$, la función es $g(x)=-3f(x+1)-2$. $D_g=(-1,+\infty)$. $I_g=\R$. \\ \img{5cm}{img/log5.png}
 		\item $\ln(-x)$
-		\item $\log_2(x^2)$
+		\answer Considerando $f(x)=\ln(x)$, la función es $g(x)=f(-x)$. $D_g=\R^{-}$. $I_g=\R$. \\ \img{5cm}{img/log6.png}
+		\item $\log_2(x^3)$
+		\answer Desarrollo algebraicamente: $\log_2(x^3)=3\log_2(x)=3\f{\ln(x)}{\ln 2}=\f{3}{\ln 2}. \ln(x)$. Considerando $f(x)=\ln(x)$, la función es $g(x)=\f{3}{\ln 2}f(x)$. $D_g=\R^{+}$. $I_g=\R$. \\ \img{5cm}{img/log7.png}
 		\item $e^{2x}$
+		\answer Considerando $f(x)=e^x$, la función es $g(x)=f(2x)$. $D_g=\R$. $I_g=\R^{+}$. \\ \img{5cm}{img/exp1.png}
 		\item $e^{-x}$
+		\answer Considerando $f(x)=e^x$, la función es $g(x)=f(-x)$. $D_g=\R$. $I_g=\R^{+}$. \\ \img{5cm}{img/exp2.png}
 		\item $3e^{x}$
+		\answer Considerando $f(x)=e^x$, la función es $g(x)=3f(x)$. $D_g=\R$. $I_g=\R^{+}$. \\ \img{5cm}{img/exp3.png}
 		\item $-e^{4x}$
+		\answer Considerando $f(x)=e^x$, la función es $g(x)=-f(4x)$. $D_g=\R$. $I_g=\R^{-}$. \\ \img{5cm}{img/exp4.png}
 		\item $e^{x-2}$
+		\answer Considerando $f(x)=e^x$, la función es $g(x)=f(x-2)$. $D_g=\R$. $I_g=\R^{+}$. \\ \img{5cm}{img/exp5.png}
 		\item $2^{x+1}$
+		\answer Reescribimos algebraicamente: $2^{x+1}=e^{\ln\left(2^{x+1}\right)}=e^{(x+1).\ln(2)}$. Considerando $f(x)=e^x$, la función es $g(x)=f(\ln(2)(x+1))$. $D_g=\R$. $I_g=\R^{+}$. \\ \img{5cm}{img/exp6.png}
 	\end{enumcols}
 
 	\exercise Resolver las siguientes ecuaciones.
@@ -296,22 +312,22 @@
 
 	\exercise Utilizando la función módulo-$n$, resolver las siguientes operaciones.
 	\begin{enumcols}[6]
-		\item $5 mod 3$
+		\item $5 \text{ mod } 3$
 		\answer $2$
 
-		\item $18 mod 3$
+		\item $18 \text{ mod } 3$
 		\answer $0$
 
-		\item $-2 mod 3$
+		\item $-2 \text{ mod } 3$
 		\answer $1$
 
-		\item $100 mod 7$
+		\item $100 \text{ mod } 7$
 		\answer $2$
 
-		\item $18 mod -3$
+		\item $18 \text{ mod } -3$
 		\answer $0$
 
-		\item $-2 mod -3$
+		\item $-2 \text{ mod } -3$
 		\answer $-2$
 
 	\end{enumcols}
