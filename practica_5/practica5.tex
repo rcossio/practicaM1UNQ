@@ -411,14 +411,6 @@
 
 	\end{enumcols}
 
-	% Aca pondría una función que tome palabras y devuelva la longitud de la palabra. Como para que no sean sólo funciones reales.
-	% O tambien una función que concatene palabras f(x)=x+'mesa' f(sobre)=sobremesa.
-	% O una función que reemplaze vocales por otras.
-	% O una función que tome pares ordenados y devuelva numeros f(x,y)=x+y
-	% O una función clasificadora (partida)
-
-	\exercise La \textit{cota superior asintótica del uso de recursos de un algoritmo} (también llamada \textit{Big O}) indica cuánto aumenta el uso de recursos en función del tamaño de los datos de entrada $n$, medidos como un numero natural. Por ejemplo, asumiendo valores grandes de $n$, un algoritmo caracterizado por $O(n)$ duplicará su tiempo de ejecución cuando se duplique $n$, ya que se comportará como la función $f(n)=n$, que es lineal. Por otra parte, un algoritmo $O(n^2)$ tardará 4 veces más al duplicar $n$ ya que se comportará como la función $f(n)=n^2$, que es cuadrática. Si se tiene tres algoritmos distintos para realizar una tarea, con las siguientes \textit{Big O}: $O(n^2)$, $O(\log n)$ y $O(2^n)$. ¿Qué algoritmo es el idóneo para trabajar con una gran cantidad de datos de entrada? Para responder esto, realizar un gráfico de las funciones $n^2$, $\log n$ y $2^n$. La mejor será aquella que crece con menor rapidez en función de $n$.
-
 	\exercise Resolver los siguientes ejercicios sobre funciones de orden superior:
 	\begin{enumcols}
 		\item Se denomina $A$ al conjunto de todas las funciones cuadráticas $f: \R \to \R ~|~ f(x)=ax^2+bx+c$ y se define la función $F: A \to \R$ de la forma $\Delta=F(f) \Eq $ "$\Delta$ es el discriminante de $f$". Calcular $F(x^2+x-2)$, $F(x^2+5x+4)$ y $F(3x^2-x)$. Realizar un diagrama de Venn enlazado para representar las imágenes calculadas.
@@ -426,6 +418,8 @@
 		\item La función $F$ toma funciones reales $f$ y devuelve otra función $g$ de la forma $g=F(f)=f \circ f$. Considerando $h(x)=x+5$, ~ $i(x)=3x$ ~ y ~ $j(x)=x^2+x$, calcular $F(h)$, $F(i)$, $F(j)$ y representar lo en un diagrama de Venn enlazado.
 		\item Dadas las funciones $f_m: \R \to \R ~|~ f_m(x)=mx+5$ y la función $F: \R \to B ~|~ F(m)= f_{m}$. Obtener $F(2)$ y graficarla. Describir qué elementos contiene el conjunto $B$ (el codominio de $F$).
 	\end{enumcols}
+
+	\exercise La \textit{cota superior asintótica del uso de recursos de un algoritmo} (también llamada \textit{Big O}) indica cuánto aumenta el uso de recursos en función del tamaño de los datos de entrada $n$, medidos como un numero natural. Por ejemplo, asumiendo valores grandes de $n$, un algoritmo caracterizado por $O(n)$ duplicará su tiempo de ejecución cuando se duplique $n$, ya que se comportará como la función $f(n)=n$, que es lineal. Por otra parte, un algoritmo $O(n^2)$ tardará 4 veces más al duplicar $n$ ya que se comportará como la función $f(n)=n^2$, que es cuadrática. Si se tiene tres algoritmos distintos para realizar una tarea, con las siguientes \textit{Big O}: $O(n^2)$, $O(\log n)$ y $O(2^n)$. ¿Qué algoritmo es el idóneo para trabajar con una gran cantidad de datos de entrada? Para responder esto, realizar un gráfico de las funciones $n^2$, $\log n$ y $2^n$. La mejor será aquella que crece con menor rapidez en función de $n$.
 
 \end{enumerate}
 
