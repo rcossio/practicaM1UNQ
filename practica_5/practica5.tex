@@ -6,7 +6,7 @@
 
 \begin{enumerate}
 
-	\exercise Indicar cuáles de las siguientes relaciones son funciones y en caso de que si, demostrarlo/justificarlo y escribir la relación con la notación de funciones.
+	\exercise Determina cuáles de las siguientes relaciones son funciones. Justifica tu respuesta en cada caso y, si son funciones, representa la relación usando la notación adecuada.
 	\begin{enumcols}
 		\item $R=\{(x,y)\in\R^2 ~|~ |x|=|y|\}$
 		\answer No es función ya que $|x|=|y| \Then y=\pm x$, por lo que no hay unicidad. Por ejemplo $(1,1)$ y $(1,-1)$ pertenecen a $R$.
@@ -31,7 +31,7 @@
 
 	\end{enumcols}
 
-	\exercise Dada la relación que vincula los elementos indicados, analizar si corresponde a una función o no. De aquellas que son funciones, indicar dominio y codominio. De aquellas que no lo son, especificar què condición es la que no se cumple: existencia, unicidad o ambas.
+	\exercise Analiza la relación dada entre los elementos y determina si es una función. Para las que sí lo son, especifica el dominio y el codominio. Para las que no, señala qué criterio no se satisface: existencia, unicidad o ambos.
 	\begin{enumcols}
 		\item Estudiantes del curso con su fecha de nacimiento.
 		\answer Es función, todo estudiante nació en una única fecha. $D_f$: estudiantes del curso. $\Cod_f$: fechas. \\ $f:D_f \to \Cod_f|~ y \text{ es la fecha de nacimiento de } x$.
@@ -59,7 +59,7 @@
 
 	\end{enumcols}
 
-	\exercise Se definen las siguientes relaciones en $A = \{a, b, c, d, e\}$, indicar de estas cuáles son funciones. Para las que sí sean funciones, indicar si son inyectivas, sobreyectivas y/o biyectivas, y cuando sea posible definir por extensión la función inversa.
+	\exercise En el conjunto $A = \{a, b, c, d, e\}$ se definen las siguientes relaciones. Identifica cuáles son funciones. Para las que lo sean, evalúa si son inyectivas, sobreyectivas y/o biyectivas. Además, cuando corresponda, proporciona la función inversa por extensión.
 	\begin{enumcols}
 		\item $R = \{(a,b), (b,c), (c,d)\}$
 		\answer No es función en A ya que $d$ y $e$ no tienen imagen.
@@ -77,7 +77,7 @@
 		\answer Es función, por lo que la nombraremos $f$ en vez de $R$. Como $I_f=\{a,b,c,d,e\}=A=\Cod_f$, es sobreyectiva. Además, por inspección, es inyectiva. Por lo que es biyectiva. \\ La inversa es $f^{-1}=\{(c,a), (e,b), (a,c), (b,d), (d,e)\}$.
 	\end{enumcols}
 
-	\exercise De cada una de estas funciones, indicar si es inyectiva y sobreyectiva, justificando. Para las que sean biyectivas, decir cuál es la función inversa.
+	\exercise Estudia cada función dada para determinar si es inyectiva y sobreyectiva, proporcionando justificación. Para aquellas que resulten biyectivas, describe la función inversa.
 	\begin{enumcols} 
 		\item La función que indica la fecha de nacimiento de cada estudiante de la Universidad, donde el codominio son los días desde el 1ro de enero de 1800.
 		\answer La función relaciona estudiante $\to$ fecha. La función no es sobreyectiva ya que no hay personas que hayan nacido el 1ro de enero de 1800. Además, no es inyectiva ya que hay personas que nacieron el mismo día.
@@ -99,7 +99,7 @@
 
 	\end{enumcols}
 
-	\exercise Graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible y analizar si es inyectiva, sobreyectiva y/o biyectiva. En caso de que sea posible, definir la inversa.
+	\exercise Graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible y su imagen. Luego, analizar si es inyectiva, sobreyectiva y/o biyectiva. En caso de que sea posible, definir la inversa.
 	\begin{enumcols}[2] 
 
 		\item $f(x)=2x-1$
@@ -131,24 +131,24 @@
 
 	\end{enumcols}
 
-	\exercise Graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible e imagen.
+	\exercise Graficar las siguientes funciones $f: \R \to \R$ e indicar su imagen.
 	\begin{enumcols}[3]
 		\item $f(x)=\SEL{2x-1 & si ~x\leq 1\\ x^2 & si ~x>1 }$
-		\answer $D_f=\R$. $I_f=\R$. \\ \img{6cm}{img/piece1.png}
+		\answer $I_f=\R$. \\ \img{6cm}{img/piece1.png}
 		\item $f(x)=\SEL{-x & si ~~x\leq 0\\ x  & si ~0<x\leq 3 \\ -x & si ~x>3}$
-		\answer $D_f=\R$. $I_f=(-\infty,3)\union [0,+\infty)$. \\ \img{6cm}{img/piece2.png}
+		\answer $I_f=(-\infty,3)\union [0,+\infty)$. \\ \img{6cm}{img/piece2.png}
 		\item $f(x)=\SEL{3x-2 & si ~~x\leq 2 \\ x^2 & si ~~2<x\leq 3 \\ \f{x+6}{9} & si ~x>3}$
-		\answer $D_f=\R$. $I_f=\R$. \\ \img{6cm}{img/piece3.png}
+		\answer $I_f=\R$. \\ \img{6cm}{img/piece3.png}
 		\item $f(x)=\SEL{x^2+7 & si ~~x\leq 2\\ x+4 & si ~~x>2}$
-		\answer $D_f=\R$. $I_f=(6,+\infty)$. \\ \img{6cm}{img/piece4.png}
+		\answer $I_f=(6,+\infty)$. \\ \img{6cm}{img/piece4.png}
 		\item $f(x)=|x|$
-		\answer $D_f=\R$. $I_f=[0,+\infty)$. \\ \img{6cm}{img/piece5.png}
+		\answer $I_f=[0,+\infty)$. \\ \img{6cm}{img/piece5.png}
 	\end{enumcols}
 
-	\exercise Indicar a qué función corresponde este gráfico. Observando el gráfico, indicar si la función es inyectiva, y si es sobreyectiva.
+	\exercise Definir las funciones correspondientes a los siguientes los gráficos, e indicar si son inyectivas, sobreyectivas y/o biyectivas.
 	\begin{enumcols}[2]
 		\item \img{55mm}{img/func1.png}
-		\answer $f: \R \to \R ~|~ f(x)=\SEL{-x-1 & si~ x\leq0 \\x-1 & si~ 0<x\leq 3 \\ 2 & si~ 3<x\leq4 \\ \f{1}{2}x & si~ 4<x}$
+		\answer $f: \R \to \R ~|~ f(x)=\SEL{-x-1 & si~ x\leq0 \\x-1 & si~ 0<x\leq 3 \\ 2 & si~ 3<x\leq4 \\ \frac{1}{2}x & si~ 4<x}$
 
 		\item \img{55mm}{img/func2.png}
 		\answer $f: \R \to \R ~|~ f(x)=\SEL{1 & si~ x\leq-1\\x^2 & si~ -1<x< 1 \\ -1 & si~ 1\leq x}$
@@ -161,7 +161,7 @@
 
 	\end{enumcols}
 
-	\exercise Definir una función que describa la situación, indicar el dominio, codominio e imagen y graficarla.
+	\exercise Definir una función que describa la situación. Indicar el dominio, codominio e imagen y graficarla.
 	\begin{enumcols} 
 		\item Un negocio mayorista ofrece la siguiente oferta sobre un tipo de galletitas: hasta 5 paquetes se venden a 6 pesos el paquete; pasando los 5 paquetes hasta los 10, 5 pesos por paquete adicional; pasando los 10 paquetes, 3 pesos por paquete adicional. Por ejemplo, si una persona compra 12 paquetes, paga (5.6)+(5.5)+(2.3) = 61 pesos.
 		\answer $f: \N \to \N ~|~ f(x)=\SEL{6x & si~ 1\leq x\leq 5 \\30+5x & si~ 6\leq x\leq 10 \\55+3x & si~ 11\leq x}$
@@ -201,7 +201,7 @@
 		\answer Reformulamos algebraicamente: $\f{2x+3}{4x-1}=\f{1}{2} \left(\f{4x+6}{4x-1}\right)= \f{1}{2} \left(\f{4x-1}{4x-1}+\f{7}{4x-1}\right) = \f{1}{2} + \f{7}{2(4x-1)} = \f{7}{8\left(x-\frac{1}{4}\right)} + \f{1}{2}$. \\ La función es $g(x)=7.f\left(8\left(x-\frac{1}{4}\right)\right)+ \f{1}{2}$. $D_g=\R\setminus\left\{\f{1}{4}\right\}$. $I_g=\R\setminus\left\{\f{1}{2}\right\}$. \\ \img{5cm}{img/homografica4.png}.  
 	\end{enumcols}
 
-	\exercise Considerando la gráfica de las funciones trigonométricas básicas, graficar las siguientes funciones $g: D_{f} \to \R$, indicando el dominio más amplio posible, imagen y período.
+	\exercise Considerando la gráfica de las funciones trigonométricas básicas, graficar las siguientes funciones $g: D_{f} \to \R$, indicando el dominio más amplio posible, la imagen y el período.
 	\begin{enumcols}[3]
 		\item $g(x)=\sin(2x)$
 		\answer Considerando $f(x)=\sin(x)$, la función es $g(x)=f(2x)$. $D_g=\R$. $I_g=[-1,1]$. $P=\pi$. \\ \img{7cm}{img/sin1.png}
@@ -241,11 +241,15 @@
 	\exercise Resolver las siguientes ecuaciones hallando todas las soluciones posibles.
 	\begin{enumcols}[3]
 		\item $2\sin(x)=1$
+		\answer Reformulamos la ecuación a $\sin(x)=\f{1}{2}$. En $[0,2\pi)$ uno de los valores es $x=\arcsin\left(\f{1}{2}\right)=\f{\pi}{6}=30\degs$, el otro por simetría con respecto a $90\degs$ es $x=150\degs=\f{5}{6}\pi$. Como esas soluciones se repiten peiodicamente todas el conjunto solución es $S=\left\{x\in\R ~\bigg|~ \left(x=\f{\pi}{6}+2k\pi \text{ con } k \in \Z\right) \lor \left(x=\f{5}{6}\pi+2m\pi \text{ con } m \in \Z\right)\right\}$   
 		\item $3\sin(x)=0$
+		\answer Es equivalente a $\sin(x)=0$ cuyas soluciones son $\{x\in \R ~|~ x=k\pi \text{ con } k \in \Z\}$
 		\item $4\sin^{2}\left(x-\f{\pi}{2}\right)=0$
+		\answer Reformulamos la ecuación a $\sin\left(x-\f{\pi}{2}\right)=0$ cuyas soluciones provienen de dezplazar $\f{\pi}{2}$ las soluciones de $\sin(x)=0$. Por lo tanto, el conjunto soluciones es $\left\{x\in \R ~\bigg|~ x=\f{\pi}{2}+k\pi \text{ con } k \in \Z\right\}$ 
 		\item $\sin(x)-\f{\sqrt{3}}{2}=0$
 		\item $2\cos(-x)=\sqrt{2}$
-		\item $20\cos(x)+60=-80$
+		\item $20\cos(x)+60=80$
+		\answer Reformulamos la ecuación a $\cos(x)=1$, que tiene como conjunto solución a \\$S=\{x\in\R ~|~ x=2k\pi \text{ con } k\in\Z\}$
 	\end{enumcols}
 
 	\exercise Considerando las gráficas de las funciones exponencial y logaritmo, graficar las siguientes funciones $g: D_{f} \to \R$, indicando el dominio más amplio posible e imagen.
@@ -281,105 +285,173 @@
 	\exercise Resolver las siguientes ecuaciones.
 	\begin{enumcols}[2]
 		\item $2^x=10$
+		\answer $x=\f{\ln 10}{\ln 2}$
 		\item $2\ln(x)=4$
-		\item $e^{x^2+1}=\f{1}{e^2}$
-		\item $\ln(x)+\ln(x^2)=-\ln(6)$
+		\answer $x=e^2$
+		\item $e^{x^2-3}=\f{1}{e^2}$
+		\answer $x=\pm1$
+		\item $\ln(x)+\ln(x^2)=-\ln(8)$
+		\answer $x=\f{1}{2}$
 	\end{enumcols}
 
-	\exercise Hallar la función inversa cuando sea posible, indicando el dominio e imagen.
+	\exercise Elige un dominio y codominio para las leyes de asignación dadas, de modo que la función tenga inversa. Luego, encuentra la ley de asignación de esa función inversa.
 	\begin{enumcols}[2]
 		\item $f(x)=\f{2x-1}{3}$
-		\item $g(x)=2x^2+x-1$
+		\answer $D_f=\R$. $Cod_f=\R$. $f^{-1}(x)=\f{3x+1}{2}$
+		\item $g(x)=(x-3)^2-5$
+		\answer $D_g=[3,+\infty)$. $Cod_g=[-5,+\infty)$. $g^{-1}(x)=\sqrt{x+5}+3$
 		\item $h(x)=\ln(x^2-1)+5$
+		\answer $D_h=(1,+\infty)$. $Cod_h=\R$. $h^{-1}(x)=\sqrt{e^{x-5}+1}$
 		\item $i(x)=\displaystyle{4+16 e^{-\frac{1}{2}x}}$
+		\answer $D_i=\R$. $Cod_i=(4,+\infty)$. $h^{-1}(x)=-2\ln\left(\f{x-4}{16}\right)$
 	\end{enumcols}
 
 	\exercise Utilizando las funciones parte entera techo/piso y la parte fraccionaria, resolver las siguientes operaciones.
 	\begin{enumcols}[4]
 		\item $\floor{2}$
+		\answer $\floor{2}=2$
 		\item $\floor{2.3}$
-		\item $\floor{2.9}$ 
+		\answer $\floor{2.3}=2$
+		\item $\floor{2.9}$
+		\answer $\floor{2.9}=2$
 		\item $\floor{-6}$
+		\answer $\floor{-6}=-6$
 		\item $\floor{-6.8}$
+		\answer $\floor{-6.8}=-7$
 		\item $\floor{-6.1}$
+		\answer $\floor{-6.1}=-7$
 		\item $\ceil{1.7}$
+		\answer $\ceil{1.7}=2$
 		\item $\ceil{1.2}$
+		\answer $\ceil{1.2}=2$
 		\item $\ceil{1}$
+		\answer $\ceil{1}=1$
 		\item $\ceil{-10.5}$
+		\answer $\ceil{-10.5}=-10$
 		\item $\ceil{-10}$
+		\answer $\ceil{-10}=-10$
 		\item $\text{frac}(4.8)$
+		\answer $\text{frac}(4.8)=0.8$
 		\item $\text{frac}(4)$
+		\answer $\text{frac}(4)=0$
 		\item $\text{frac}(-5.2)$
+		\answer $\text{frac}(-5.2)=0.8$
 		\item $\text{frac}(-5)$
-	\end{enumcols}
-
-	\exercise Graficar las siguientes funciones $f: D_{f} \to \R$, indicando el dominio más amplio posible e imagen, y estudiar si son inyectivas, sobreyectivas y/o biyectivas.
-	\begin{enumcols}[2]
-
-		\item $\floor{x}$
-
-		\item $\ceil{x}$
-
-		\item $\text{frac}(x)$
-
-		\item $3(x-\floor{x})$
-		\answer $D_f=\R$. La función no es sobreyectiva ya que 5 no tiene preimagen. La función no es inyectiva ya que $f(1)=f(2)=0$.
+		\answer $\text{frac}(-5)=0$
 	\end{enumcols}
 
 	\exercise Utilizando la función módulo-$n$, resolver las siguientes operaciones.
 	\begin{enumcols}[3]
 		\item $5 \text{ mod } 3$
-		\answer $2$
+		\answer $5 \text{ mod } 3 = 2$
 
 		\item $18 \text{ mod } 3$
-		\answer $0$
+		\answer $18 \text{ mod } 3 = 0$
 
 		\item $-2 \text{ mod } 3$
-		\answer $1$
+		\answer $-2 \text{ mod } 3 = 1$
 
 		\item $100 \text{ mod } 7$
-		\answer $2$
+		\answer $100 \text{ mod } 7 = 2$
 
 		\item $18 \text{ mod } -3$
-		\answer $0$
+		\answer $18 \text{ mod } -3 = 0$
 
 		\item $-2 \text{ mod } -3$
-		\answer $-2$
-
+		\answer $-2 \text{ mod } -3 = -2$
 	\end{enumcols}
 
-	\exercise En cada caso de ser posible, definir las funciones $g \circ f$ y $f \circ g$ indicando su dominio más amplio y codominio. Evidenciar que las mismas son diferentes mediante un par ordenado o su gráfico.
+	\exercise Graficar las siguientes funciones, indicar su imagen y estudiar si son inyectivas, sobreyectivas y/o biyectivas.
+	\begin{enumcols}[2]
+
+		\item $f: \R \to \Z ~|~ f(x)=\floor{x}$
+		\answer $I_f=\Z$. No es inyectiva pues $f(0.5)=f(0.9)=0$. Es sobreyectiva ya que $I_f = Cod_f$. \\ \img{5.5cm}{img/floor.png}
+
+		\item $f: \R \to \Z ~|~ f(x)=\ceil{x}$
+		\answer $I_f=\Z$. . No es inyectiva pues $f(0.5)=f(0.9)=1$. Es sobreyectiva ya que $I_f = Cod_f$. \\ \img{5.5cm}{img/ceil.png}
+
+		\item $f: \R \to \R ~|~ f(x)=\text{frac}(x)$
+		\answer $I_f=[0,1)$. No es inyectiva pues $f(0.7)=f(1.7)=0.7$. No es sobreyectiva ya que $I_f \neq Cod_f$. \\ \img{6cm}{img/frac.png}
+
+		\item $f: \R \to \R ~|~ f(x)=3(x-\floor{x})$
+		\answer Considerando que $f(x)=3 \text{frac}(x)$ realizamos el gráfico. $I_f=[0,3)$. No es inyectiva pues $f(0.9)=f(1.9)=2.7$. No es sobreyectiva ya que $I_f \neq Cod_f$. \\ \img{6cm}{img/frac2.png}
+
+		\item $f: \Z \to \Z ~|~ f(x)= x \text{ mod } 5$
+		\answer $I_f=\{0,1,2,3,4\}$. No es inyectiva ya que $f(3)=f(8)=3$. No es sobreyectiva pues $I_f\neq Cod_f$.  \\ \img{5cm}{img/mod1.png}
+
+		\item $f: \Z \to \Z ~|~ f(x)= x \text{ mod } -4$
+		\answer $I_f=\{-3,-2,-1,0\}$. No es inyectiva ya que $f(3)=f(7)=-1$. No es sobreyectiva pues $I_f\neq Cod_f$. \\ \img{5cm}{img/mod2.png}
+	\end{enumcols}
+
+	\exercise Definir las funciones $g \circ f$ y $f \circ g$ indicando su dominio más amplio y codominio. Evidenciar que las mismas son diferentes comparación de pares ordenados, su gráfico u otro método.
 	\begin{enumcols}[2]
 		\item $f(x)=3x$ ~y~ $g(x)=x-1$
-		\item $f(x)=\lfloor x \rfloor$ ~y~ $g(x)=x^2$
+		\answer $f\circ g: \R \to \R ~|~ (f\circ g) (x)=3(x-1)$ \\ $g\circ f: \R \to \R ~|~ (g\circ f) (x)=3x-1$ \\ Las funciones son distintas pues $(f\circ g) (3)=6$ mientras que $(g\circ f) (3)=8$ 
+
+		\item $f(x)=\floor{x}$ ~y~ $g(x)=x^2$
+		\answer $f\circ g: \R \to \Z ~|~ (f\circ g) (x)=\floor{x^2}$ \\ $g\circ f: \R \to \Z ~|~ (g\circ f) (x)=\floor{x}^2$ \\ Las funciones son distintas pues $(f\circ g) (4.2)=17$ mientras que $(g\circ f) (4.2)=16$ 
+
 		\item $f(x)=2x$ ~y~ $g(x)=\sqrt{x}$
+		\answer $f\circ g: [0,+\infty) \to \R ~|~ (f\circ g) (x)=2\sqrt{x}$ \\ $g\circ f: [0,+\infty) \to \R ~|~ (g\circ f) (x)=\sqrt{2x}$ \\ Las funciones son distintas pues $(f\circ g) (2)=2\sqrt{2}$ mientras que $(g\circ f) (2)=2$ 
+
 		\item $f(x)=\sin(x)$ ~y~ $g(x)=3x+4$
-		\item $f(x)=3x$ ~y~ $g(x)=\left\{\begin{matrix}x+3 ~~~ si ~~x\leq 6\\ x+5 ~~~ si ~~x>6\end{matrix}\right.$
+		\answer $f\circ g: \R \to \R ~|~ (f\circ g) (x)=2\sin(3x+4)$ \\ $g\circ f: \R \to \R ~|~ (g\circ f) (x)=3\sin(x)+4$ \\ Las funciones son distintas pues $(f\circ g) (0)=0$ mientras que $(g\circ f) (0)=\sin(4)$ 
+
+		\item $f(x)=3x$ ~y~ $g(x)=\SEL{x+3 & si ~~x\leq 6\\ x+5 & si ~~x>6}$
+		\answer $f\circ g: \R \to \R ~|~ (f\circ g) (x)=\SEL{3x+9 & si ~~x\leq 6\\ 3x+15 & si ~~x>6}$. \\ $g\circ f: \R \to \R ~|~ (g\circ f) (x)=\SEL{3x+3 & si ~~x\leq 2\\ 3x+5 & si ~~x>2}$ \\ Las funciones son distintas pues $(f\circ g) (1)=12$ mientras que $(g\circ f) (1)=6$ 
+
 		\item $f(x)=|x|$ ~y~ $g(x)=x+4$
+		\answer $f\circ g: \R \to \R ~|~ (f\circ g) (x)=|x+4|$ \\ $g\circ f: \R \to \R ~|~ (g\circ f) (x)=|x|+4$ \\ Las funciones son distintas pues $(f\circ g) (-1)=3$ mientras que $(g\circ f) (-1)=5$ 
+
 		\item $f(x)=\log(x)$ ~y~ $g(x)=x^2$
+		\answer $f\circ g: \R\setminus\{0\} \to \R ~|~ (f\circ g) (x)=\log(x^2)$ \\ $g\circ f: (0,+\infty) \to \R ~|~ (g\circ f) (x)=\log^2(x)$ \\ Las funciones son distintas pues no tienen el mismo dominio.
+
 		\item $f(x)=e^{x}$ ~y~ $g(x)=|x|$
+		\answer $f\circ g: \R \to \R ~|~ (f\circ g) (x)=e^{|x|}$ \\ $g\circ f: \R \to \R ~|~ (g\circ f) (x)=|e^x|$ \\ Las funciones son distintas pues $(f\circ g) (-1)=\frac{1}{e}$ mientras que $(g\circ f) (-1)=e$ 
+
 		\item $f(x)=\f{1}{x}$ ~y~ $g(x)=\cos(x)$
+		\answer $f\circ g: \R\setminus\{x |~ x=\frac{\pi}{2}+k\pi \text{ con } k\in\Z\} \to \R ~|~ (f\circ g) (x)=\f{1}{\cos(x)}$ \\ $g\circ f: \R\setminus\{0\} \to \R ~|~ (g\circ f) (x)=\cos\left(\f{1}{x}\right)$ \\ Las funciones son distintas pues no tienen el mismo dominio
+
 		\item $f(x)=\sin(x)$ ~y~ $g(x)=2x$
+		\answer $f\circ g: \R \to \R ~|~ (f\circ g) (x)=\sin(2x)$ \\ $g\circ f: \R \to \R ~|~ (g\circ f) (x)=2\sin(x)$ \\ Las funciones son distintas pues $(f\circ g) \left(\frac{\pi}{2}\right)=0$ mientras que $(g\circ f) \left(\frac{\pi}{2}\right)=2$ 
+
 		\item $f(x)=\sqrt{x}$ ~y~ $g(x)=3x-1$
+		\answer $f\circ g: \left[\frac{1}{3},+\infty\right) \to \R ~|~ (f\circ g) (x)=\sqrt{3x-1}$ \\ $g\circ f: [0,+\infty) \to \R ~|~ (g\circ f) (x)=3\sqrt{x}-1$ \\ Las funciones son distintas pues no tienen el mismo dominio.
+
 		\item $f(x)=\ln(x)$ ~y~ $g(x)=x-1$
+		\answer $f\circ g: (1,+\infty) \to \R ~|~ (f\circ g) (x)=\ln(x-1)$ \\ $g\circ f: (0,+\infty) \to \R ~|~ (g\circ f) (x)=\ln(x)-1$ \\ Las funciones son distintas pues no tienen el mismo dominio
+
 		\item $f(x)=\displaystyle{e^{-x}}$ ~y~ $g(x)=\ln(x)$
 		\item $f(x)=\sqrt{x}$ ~y~ $g(x)=\ln(x-1)$
 		\item $f(x)=\ln(x)$ ~y~ $g(x)=x^2+4$
+
 		\item $f(x)=\sin(x)$ ~y~ $g(x)=x^2-2x+1$
+		\answer $f\circ g: \R \to \R ~|~ (f\circ g) (x)=\sin(x^2-2x+1)$ \\ $g\circ f: \R \to \R ~|~ (g\circ f) (x)=\sin^2(x)-2\sin(x)+1$ \\ Las funciones son distintas pues $(f\circ g) (1)=0$ mientras que $(g\circ f) (1)=\sin^2(1)-2\sin(1)+1\simeq0.0251$ 
 
 	\end{enumcols}
 
-	\exercise Dadas las funciones $f: [1,+\infty) \to \R ~|~ f(x)=x^2-2x$, ~~$g: \R \to \R ~|~ g(x)=\f{x}{4}$ ~~ y ~~ $h: \R \to \R ~|~ h(x)=x+12$. Calcular las composiciones indicadas:
-	\begin{enumcols} [3]
+	\exercise Dadas las funciones definidas de $\R$ a $\R$: $f(x)=x^2$, ~~$g(x)=\f{x}{4}$ ~~ y ~~ $h(x)=x+3$. Calcular las composiciones indicadas, pudiendo restringir los dominios de las funciones dominios para obtenerlas.
+	\begin{enumcols}[3]
 		\item $f \circ g \circ h$. 
+		\answer $(f \circ g \circ h)(x)=\left(\f{x+3}{4}\right)^2$
+
 		\item $h \circ g \circ f$
+		\answer $(h \circ g \circ f)(x)=\f{x^2}{4}+3$
+
 		\item $f \circ h \circ h$
+		\answer $(f \circ h \circ h)(x)=(x+6)^2$
+
 		\item $f \circ g \circ g$
 		\item $f \circ f$
 		\item $f \circ h \circ g^{-1}$
+		\answer Considerando que $g^{-1}(x)=4x$, entonces $(f \circ h \circ g^{-1})(x)=(4x+3)^2$ 
+
 		\item $g \circ h^{-1} \circ h^{-1}$
+		\answer Considerando que $h^{-1}(x)=x-3$, entonces $(g \circ h^{-1} \circ h^{-1})(x)=\f{x-6}{4}$
+
 		\item $g^{-1} \circ f \circ g^{-1}$
 		\item $f \circ f^{-1} \circ f$
+		\answer Redefinimos $f: [0,+\infty) \to [0,+\infty)$ para que tenga inversa. Luego $(f \circ f^{-1} \circ f)(x)=f(x)=x^2$
 	\end{enumcols}
 
 	\exercise Definir la función $f$ para que tenga la ley de asignación indicada a través de componer las siguientes funciones reales o sus inversas: ~~ $g(x)=x^2$, ~~ $h(x)=|x|$, ~~ $i(x)=x+1$, ~~ $j(x)=-x$  ~~y ~~ $k(x)=2x$.
@@ -429,10 +501,17 @@
 
 	\exercise Resolver los siguientes ejercicios sobre funciones de orden superior:
 	\begin{enumcols}
-		\item Se denomina $A$ al conjunto de todas las funciones cuadráticas $f: \R \to \R ~|~ f(x)=ax^2+bx+c$ y se define la función $F: A \to \R$ de la forma $\Delta=F(f) \Eq $ "$\Delta$ es el discriminante de $f$". Calcular $F(x^2+x-2)$, $F(x^2+5x+4)$ y $F(3x^2-x)$. Realizar un diagrama de Venn enlazado para representar las imágenes calculadas.
-		\item Sea $F$ una función que toma un par ordenado $(a,b)$ y una función real $f$, y devuelve otro par ordenado: se define $F$ de forma que $F((x,y),f)=(f(x),f(y))$. Por ejemplo, usando la función $f(x)=x^2$ obtenemos $F((1,-4),f)=(1,16)$. Calcular $F((-4,100),g)$ con $g(x)=\sqrt{x}$. Por otra parte, definir una función $h$ para que $F((2,5),h)=(3,6)$.
+		\item Se denomina $A$ al conjunto de todas las funciones cuadráticas $f: \R \to \R ~|~ f(x)=ax^2+bx+c$ y se define la función $F: A \to \R$ de la forma $\Delta=F(f) \Eq $ "$\Delta$ es el discriminante de $f$". Calcular $F(x^2+x-2)$, $F(x^2+5x+4)$ y $F(3x^2-x)$. Realizar un diagrama de Venn enlazado para representar las imágenes calculadas. Analizar si la función es inyectiva.
+		\answer $F(x^2+x-2)=1^2-4.1.(-2)=9$ \\ $F(x^2+5x+4)=5^2-4.1.4=9$ \\ $F(3x^2-x)=(-1)^2-4.3.0=1$\\ La función no es inyectiva pues $F(x^2+x-2)=F(x^2+5x+4)=9$.
+
+		\item Sea $F$ una función que toma un par ordenado $(a,b)$ y una función real $f$, y devuelve otro par ordenado: se define $F$ de forma que $F((x,y),f)=(f(x),f(y))$. Por ejemplo, usando la función $f(x)=x^2$ obtenemos $F((1,-4),f)=(1,16)$. Calcular $F((4,100),g)$ con $g(x)=\sqrt{x}$. Por otra parte, definir una función $h$ para que $F((2,5),h)=(3,6)$.
+		\answer $F((4,100),g)=(\sqrt{4},\sqrt{100})=(2,10)$ \\ Se define $h(x)=x+1$ para que $F((2,5),h)=(2+1,5+1)=(3,6)$
+
 		\item La función $F$ toma funciones reales $f$ y devuelve otra función $g$ de la forma $g=F(f)=f \circ f$. Considerando $h(x)=x+5$, ~ $i(x)=3x$ ~ y ~ $j(x)=x^2+x$, calcular $F(h)$, $F(i)$, $F(j)$ y representar lo en un diagrama de Venn enlazado.
+		\answer $F(h)=h \circ h$, es decir, $g: \R \to \R ~|~ g(x)=x+10$. \\ $F(i)=i \circ i$, es decir, $g: \R \to \R ~|~ g(x)=9x$. \\ $F(j)=j \circ j$, es decir, $g: \R \to \R ~|~ g(x)=x^4+2x^3+2x^2+x$. 
+
 		\item Dadas las funciones $f_m: \R \to \R ~|~ f_m(x)=mx+5$ y la función $F: \R \to B ~|~ F(m)= f_{m}$. Obtener $F(2)$ y graficarla. Describir qué elementos contiene el conjunto $B$ (el codominio de $F$).
+		\answer $F(2)$ es la función $f: \R \to \R ~|~ f(x)=2x+5$. \\ $B$ es el conjunto $B$ de todas las funciones lineales (representadas por rectas oblicuas).  
 	\end{enumcols}
 
 	\exercise La \textit{cota superior asintótica del uso de recursos de un algoritmo} (también llamada \textit{Big O}) indica cuánto aumenta el uso de recursos en función del tamaño de los datos de entrada $n$, medidos como un numero natural. Por ejemplo, asumiendo valores grandes de $n$, un algoritmo caracterizado por $O(n)$ duplicará su tiempo de ejecución cuando se duplique $n$, ya que se comportará como la función $f(n)=n$, que es lineal. Por otra parte, un algoritmo $O(n^2)$ tardará 4 veces más al duplicar $n$ ya que se comportará como la función $f(n)=n^2$, que es cuadrática. Si se tiene tres algoritmos distintos para realizar una tarea, con las siguientes \textit{Big O}: $O(n^2)$, $O(\log n)$ y $O(2^n)$. ¿Qué algoritmo es el idóneo para trabajar con una gran cantidad de datos de entrada? Para responder esto, realizar un gráfico de las funciones $n^2$, $\log n$ y $2^n$. La mejor será aquella que crece con menor rapidez en función de $n$.
