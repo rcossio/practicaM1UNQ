@@ -84,6 +84,7 @@
 \newcommand{\floor}[1]{\lfloor #1 \rfloor}
 \newcommand{\ceil}[1]{\lceil #1 \rceil}
 \newcommand{\degs}{^{\circ}} % Degree symbol
+\newcommand{\Sum}{\displaystyle\sum}
 
 \NewDocumentCommand{\FormatItem}{m}{#1\\[-4pt]}
 
