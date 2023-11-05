@@ -85,6 +85,8 @@
 \newcommand{\ceil}[1]{\lceil #1 \rceil}
 \newcommand{\degs}{^{\circ}} % Degree symbol
 \newcommand{\Sum}{\displaystyle\sum}
+\newcommand{\Prod}{\displaystyle\prod}
+
 
 \NewDocumentCommand{\FormatItem}{m}{#1\\[-4pt]}
 
